@@ -1,0 +1,6 @@
+# Core LLM clients supported by readmegenv2
+openai>=1.0.0
+# Groq client for alternative provider selection
+groq>=0.9.0
+# Google Gemini client for generation and judge scenarios
+google-generativeai>=0.7.0
