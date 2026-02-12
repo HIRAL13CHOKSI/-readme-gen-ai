@@ -1,0 +1,1574 @@
+{
+  "summary": {
+    "dependencies": {
+      "precision": 1.0,
+      "recall": 0.875
+    },
+    "cli": {
+      "completeness": 0.9
+    },
+    "description": {
+      "clarity": 2.7,
+      "completeness": 2.25,
+      "helpfulness": 2.3
+    },
+    "sample_size": 20,
+    "skipped": 1
+  },
+  "signal_insights": {
+    "docstrings_present": {
+      "clarity": 2.8,
+      "completeness": 2.3,
+      "helpfulness": 2.3,
+      "cli_completeness": 1.0,
+      "sample_size": 10
+    },
+    "structured_cli": {
+      "clarity": 3.0,
+      "completeness": 2.4,
+      "helpfulness": 2.6,
+      "cli_completeness": 1.0,
+      "sample_size": 5
+    },
+    "sys_argv_only": {
+      "clarity": 5.0,
+      "completeness": 5.0,
+      "helpfulness": 5.0,
+      "cli_completeness": 1.0,
+      "sample_size": 1
+    },
+    "requirements_detected": {
+      "clarity": 2.7,
+      "completeness": 2.25,
+      "helpfulness": 2.3,
+      "cli_completeness": 0.9,
+      "sample_size": 20
+    }
+  },
+  "run_config": {
+    "generation_provider": "google",
+    "generation_model": "gemini-2.5-flash",
+    "judge_provider": "google",
+    "judge_model": "gemini-2.5-flash",
+    "label": "ast-gemini-gemini"
+  },
+  "results": [
+    {
+      "script": "clippy.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\clippy_AI_README.md",
+      "ground_truth": "Sample_scripts\\clippy.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "pyperclip"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.03246655644070344,
+        "rationale": "The candidate README is exceptionally clear in detailing its AI-powered features and provides highly useful troubleshooting, but has a minor issue with the installation path example and lacks platform-specific deployment instructions found in the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "currency_converter.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\currency_converter_AI_README.md",
+      "ground_truth": "Sample_scripts\\currency_converter.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "requests"
+        ]
+      },
+      "cli": {
+        "detected": 6,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.03314635390107088,
+        "rationale": "The candidate README omits crucial information regarding interactive usage, module integration, and Docker deployment, and introduces misleading dependencies, significantly hindering its completeness, clarity, and helpfulness.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 5,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "CyberScraper.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\CyberScraper_AI_README.md",
+      "ground_truth": "Sample_scripts\\CyberScraper.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.5555555555555556,
+        "actual": [
+          "CyberScraper",
+          "PySocks",
+          "app",
+          "google_auth_oauthlib",
+          "higher",
+          "pandas",
+          "requires",
+          "src",
+          "streamlit"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.038963161507534406,
+        "rationale": "The candidate README is clear in its presentation of basic information, but it is significantly incomplete compared to the reference README, missing major features, the dual-branch architecture, detailed usage guides, and comprehensive troubleshooting, thereby reducing its overall helpfulness.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 2,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure."
+          ]
+        }
+      }
+    },
+    {
+      "script": "docker-db-auto-backup.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\docker-db-auto-backup_AI_README.md",
+      "ground_truth": "Sample_scripts\\docker-db-auto-backup.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "pytest"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.04722142240138209,
+        "rationale": "The candidate README fundamentally misrepresents the project as a standalone Python script rather than a Docker container, missing crucial configuration details for Docker interaction, backup location, scheduling, and compression, which severely impacts its completeness and helpfulness.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 4,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": []
+        }
+      }
+    },
+    {
+      "script": "encrypt.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\encrypt_AI_README.md",
+      "ground_truth": "Sample_scripts\\encrypt.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "Crypto"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 1,
+        "completeness": 2,
+        "helpfulness": 1,
+        "similarity": 0.012610837438423646,
+        "rationale": "The candidate README completely fails to capture the interactive nature of the script as shown in the reference, replacing clear usage instructions with vague statements about 'internal logic' and introducing irrelevant dependencies, making it unhelpful and misleading for actual use.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "fileorganizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\fileorganizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\fileorganizer.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "extensiondict"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 5,
+        "helpfulness": 5,
+        "similarity": 0.053628601921024546,
+        "rationale": "The candidate README is exceptionally clear, complete, and helpful, providing detailed sections on installation, requirements, dependencies, examples, and troubleshooting, which are largely missing or less developed in the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 3,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": true
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "CLI handling relies on sys.argv without argparse, so flags may be under-documented (e.g., Local File Organizer).",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "fmi.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\fmi_AI_README.md",
+      "ground_truth": "Sample_scripts\\fmi.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "bs4",
+          "observation",
+          "requests"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 1,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.05509641873278237,
+        "rationale": "The candidate README describes a completely different software project with different functionality, dependencies, and usage patterns than the reference README, making it entirely misleading for the intended comparison.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 2,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Local-File-Organizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\Local-File-Organizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\Local-File-Organizer.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.28,
+        "actual": [
+          "Pillow",
+          "PyMuPDF",
+          "a",
+          "as",
+          "can",
+          "cloning",
+          "code",
+          "data_processing_common",
+          "encounter",
+          "file",
+          "file_utils",
+          "image_data_processing",
+          "individually",
+          "installed",
+          "issues",
+          "nexa",
+          "nexaai",
+          "nltk",
+          "output_filter",
+          "packages",
+          "pytesseract",
+          "python-docx",
+          "text_data_processing",
+          "them",
+          "with"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.014853323431117713,
+        "rationale": "The candidate README fundamentally misrepresents the product's core 'local-only, privacy-assured, no API' premise by listing multiple external AI providers and API key requirements, and it lacks crucial visual explanations and detailed installation steps present in the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 6,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "lock_files.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\lock_files_AI_README.md",
+      "ground_truth": "Sample_scripts\\lock_files.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "Queue",
+          "cryptography"
+        ]
+      },
+      "cli": {
+        "detected": 33,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.022675124848157646,
+        "rationale": "The candidate README has good structural elements like a flags table and troubleshooting, but it loses clarity with placeholder text and confusing dependency notes, and lacks the detailed technical depth and comprehensive examples found in the reference, especially regarding internal implementation and nuanced usage warnings.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 27,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 17,
+          "uses_sys_argv": true
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [
+          "getconf"
+        ],
+        "env_var_count": 1,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance.",
+            "External tool usage is explicitly detected for README mentions."
+          ],
+          "risks": []
+        }
+      }
+    },
+    {
+      "script": "Multilingual_Text_to_Speech.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\Multilingual_Text_to_Speech_AI_README.md",
+      "ground_truth": "Sample_scripts\\Multilingual_Text_to_Speech.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "dataset",
+          "modules",
+          "numpy",
+          "params",
+          "torch",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 9,
+        "actual": 1,
+        "hits": 1,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.02543896032075211,
+        "rationale": "The candidate README has a clear structure but completely lacks project-specific details, presenting generic information and potentially misleading dependencies for the described multilingual speech synthesis project, making it unhelpful for understanding or utilizing its specific features.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 3,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 9,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Network_Scanner.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\Network_Scanner_AI_README.md",
+      "ground_truth": "Sample_scripts\\Network_Scanner.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "device",
+          "getmac",
+          "network",
+          "prettytable"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.020288642543400962,
+        "rationale": "The candidate README is well-structured but lacks crucial details for setting up the core 'known devices' feature and omits external dependencies like nmap, making it less clear and complete than the reference, and thus less helpful for a new user.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "password_generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\password_generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\password_generator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": []
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.02872759628829287,
+        "rationale": "The candidate README significantly diverges from the reference by describing a basic script rather than a configurable library, listing unrelated third-party dependencies, and missing instructions for the detailed customization features present in the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 0,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "pdfmerger.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\pdfmerger_AI_README.md",
+      "ground_truth": "Sample_scripts\\pdfmerger.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PyPDF2"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.02077302911629491,
+        "rationale": "The candidate README is structurally comprehensive with excellent usage examples and troubleshooting, but its clarity, completeness, and helpfulness are significantly diminished by the inclusion of multiple unexplained and seemingly irrelevant AI/LLM-related dependencies.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "PyCat.py",
+      "ground_truth": "Sample_scripts\\PyCat.md",
+      "error": "Missing parentheses in call to 'print'. Did you mean print(...)? (<unknown>, line 30)",
+      "mode": "error",
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      }
+    },
+    {
+      "script": "QR_Generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\QR_Generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\QR_Generator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "bs4",
+          "selenium"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 1,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.014614773629864972,
+        "rationale": "The candidate README completely misinterprets the project's purpose, describing a generic QR generator instead of the Discord QR scam and token grabber functionality central to the reference README.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "resizeimage.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\resizeimage_AI_README.md",
+      "ground_truth": "Sample_scripts\\resizeimage.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "actual": [
+          "PIL",
+          "imageexceptions",
+          "python-resize-image"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.07943112187003555,
+        "rationale": "The candidate README offers good examples and a helpful troubleshooting section but lacks a comprehensive API reference for all functions, omits the validation features, and has slightly confusing dependency and installation instructions.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 11,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "seam_carver.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\seam_carver_AI_README.md",
+      "ground_truth": "Sample_scripts\\seam_carver.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "energy_functions",
+          "numba",
+          "numpy",
+          "tqdm",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 13,
+        "actual": 12,
+        "hits": 12,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.042141693811074916,
+        "rationale": "The candidate README improves formatting and adds general best practices like badges and a testing section, but significantly detracts from completeness and helpfulness by omitting the detailed algorithm explanation, academic context, and future work present in the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 7,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 7,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Video_editor_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\Video_editor_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Video_editor_bot.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "config",
+          "handlers",
+          "pyrogram"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.03684139238791819,
+        "rationale": "The candidate README is significantly less clear, complete, and helpful than the reference due to prominent placeholder text, a vague feature list, and the absence of direct demo or support links.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "vpc_subnet_calculator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\vpc_subnet_calculator_AI_README.md",
+      "ground_truth": "Sample_scripts\\vpc_subnet_calculator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "netaddr"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 4,
+        "helpfulness": 5,
+        "similarity": 0.018248712288447388,
+        "rationale": "The candidate README is significantly more detailed and user-friendly, providing comprehensive instructions, examples, and troubleshooting, though it contains some template placeholders and unexplained dependencies.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Watermark_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\Watermark_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Watermark_bot.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "aiohttp",
+          "configs",
+          "core",
+          "hachoir",
+          "pyrogram"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.022950819672131147,
+        "rationale": "The candidate README is well-structured and explains the project's technical aspects, but critically fails to list any environment variables or configuration details necessary to make the Telegram bot functional, a major omission compared to the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "wisdom_tree.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-gemini-gemini\\generated\\wisdom_tree_AI_README.md",
+      "ground_truth": "Sample_scripts\\wisdom_tree.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.0,
+        "actual": [
+          "brew",
+          "cd",
+          "inject",
+          "sdl2_mixer",
+          "windows-curses",
+          "wisdom-tree"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 1,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.03111375346809354,
+        "rationale": "The candidate README describes a completely different project focused on 'AI-generated insights' instead of the 'tui concentration app' outlined in the reference, making it entirely unhelpful and misleading for its intended comparison.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 1,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": []
+        }
+      }
+    }
+  ]
+}
