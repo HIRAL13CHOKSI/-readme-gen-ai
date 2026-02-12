@@ -1,0 +1,1574 @@
+{
+  "summary": {
+    "dependencies": {
+      "precision": 1.0,
+      "recall": 0.875
+    },
+    "cli": {
+      "completeness": 0.9
+    },
+    "description": {
+      "clarity": 3.85,
+      "completeness": 3.2,
+      "helpfulness": 3.25
+    },
+    "sample_size": 20,
+    "skipped": 1
+  },
+  "signal_insights": {
+    "docstrings_present": {
+      "clarity": 3.9,
+      "completeness": 3.0,
+      "helpfulness": 3.1,
+      "cli_completeness": 1.0,
+      "sample_size": 10
+    },
+    "structured_cli": {
+      "clarity": 4.0,
+      "completeness": 3.4,
+      "helpfulness": 3.6,
+      "cli_completeness": 1.0,
+      "sample_size": 5
+    },
+    "sys_argv_only": {
+      "clarity": 4.0,
+      "completeness": 3.0,
+      "helpfulness": 3.0,
+      "cli_completeness": 1.0,
+      "sample_size": 1
+    },
+    "requirements_detected": {
+      "clarity": 3.85,
+      "completeness": 3.2,
+      "helpfulness": 3.25,
+      "cli_completeness": 0.9,
+      "sample_size": 20
+    }
+  },
+  "run_config": {
+    "generation_provider": "openai",
+    "generation_model": "gpt-4o-mini",
+    "judge_provider": "openai",
+    "judge_model": "gpt-4o-mini",
+    "label": "ast-openai-openai"
+  },
+  "results": [
+    {
+      "script": "clippy.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\clippy_AI_README.md",
+      "ground_truth": "Sample_scripts\\clippy.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "pyperclip"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.032033066391113404,
+        "rationale": "The candidate README is clear but lacks a demo and detailed step-by-step instructions, which reduces its completeness and helpfulness compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "currency_converter.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\currency_converter_AI_README.md",
+      "ground_truth": "Sample_scripts\\currency_converter.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "requests"
+        ]
+      },
+      "cli": {
+        "detected": 6,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.028012096132420818,
+        "rationale": "The candidate README is clear and well-structured but lacks some detailed usage examples and specific error handling information compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 5,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "CyberScraper.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\CyberScraper_AI_README.md",
+      "ground_truth": "Sample_scripts\\CyberScraper.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.5555555555555556,
+        "actual": [
+          "CyberScraper",
+          "PySocks",
+          "app",
+          "google_auth_oauthlib",
+          "higher",
+          "pandas",
+          "requires",
+          "src",
+          "streamlit"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.00798432169557959,
+        "rationale": "The candidate README lacks detailed features, installation instructions, and usage examples compared to the reference README, making it less informative.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 2,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure."
+          ]
+        }
+      }
+    },
+    {
+      "script": "docker-db-auto-backup.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\docker-db-auto-backup_AI_README.md",
+      "ground_truth": "Sample_scripts\\docker-db-auto-backup.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "pytest"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.0553857219924474,
+        "rationale": "The candidate README provides a clear overview and installation instructions but lacks detailed information on supported databases and advanced configuration options.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 4,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": []
+        }
+      }
+    },
+    {
+      "script": "encrypt.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\encrypt_AI_README.md",
+      "ground_truth": "Sample_scripts\\encrypt.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "Crypto"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.00357653791130186,
+        "rationale": "The candidate README is clear and provides a good overview, but lacks specific usage examples for encryption and decryption that are present in the reference README.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "fileorganizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\fileorganizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\fileorganizer.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "extensiondict"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.05560747663551402,
+        "rationale": "The candidate README is clear but lacks detailed information on supported file types and has incomplete sections on contributing and licensing.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 3,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": true
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "CLI handling relies on sys.argv without argparse, so flags may be under-documented (e.g., Local File Organizer).",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "fmi.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\fmi_AI_README.md",
+      "ground_truth": "Sample_scripts\\fmi.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "bs4",
+          "observation",
+          "requests"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.05612244897959184,
+        "rationale": "The candidate README is clear but lacks detailed usage examples and specific functionality descriptions compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 2,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Local-File-Organizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\Local-File-Organizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\Local-File-Organizer.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.28,
+        "actual": [
+          "Pillow",
+          "PyMuPDF",
+          "a",
+          "as",
+          "can",
+          "cloning",
+          "code",
+          "data_processing_common",
+          "encounter",
+          "file",
+          "file_utils",
+          "image_data_processing",
+          "individually",
+          "installed",
+          "issues",
+          "nexa",
+          "nexaai",
+          "nltk",
+          "output_filter",
+          "packages",
+          "pytesseract",
+          "python-docx",
+          "text_data_processing",
+          "them",
+          "with"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.0350140056022409,
+        "rationale": "The candidate README lacks detailed explanations of features and usage, making it less clear and complete compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 6,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "lock_files.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\lock_files_AI_README.md",
+      "ground_truth": "Sample_scripts\\lock_files.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "Queue",
+          "cryptography"
+        ]
+      },
+      "cli": {
+        "detected": 33,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.025113482284973176,
+        "rationale": "The candidate README provides a clear overview and examples, but lacks detailed explanations of certain features and does not cover all aspects found in the reference README.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 27,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 17,
+          "uses_sys_argv": true
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [
+          "getconf"
+        ],
+        "env_var_count": 1,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance.",
+            "External tool usage is explicitly detected for README mentions."
+          ],
+          "risks": []
+        }
+      }
+    },
+    {
+      "script": "Multilingual_Text_to_Speech.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\Multilingual_Text_to_Speech_AI_README.md",
+      "ground_truth": "Sample_scripts\\Multilingual_Text_to_Speech.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "dataset",
+          "modules",
+          "numpy",
+          "params",
+          "torch",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 9,
+        "actual": 1,
+        "hits": 1,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.02976285214069712,
+        "rationale": "The candidate README provides a clear overview and usage instructions but lacks detailed explanations about the model's architecture and training process compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 3,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 9,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Network_Scanner.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\Network_Scanner_AI_README.md",
+      "ground_truth": "Sample_scripts\\Network_Scanner.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "device",
+          "getmac",
+          "network",
+          "prettytable"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.04563758389261745,
+        "rationale": "The candidate README is clear but lacks detailed usage instructions and examples compared to the reference README.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "password_generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\password_generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\password_generator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": []
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.026721866767030485,
+        "rationale": "The candidate README is clear but lacks detailed usage examples and configuration options compared to the reference README.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 0,
+          "class_docstrings": 1
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "pdfmerger.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\pdfmerger_AI_README.md",
+      "ground_truth": "Sample_scripts\\pdfmerger.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PyPDF2"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.046418567426970786,
+        "rationale": "The candidate README is clear and provides a good overview, but it includes unnecessary dependencies and lacks details on the GUI aspect.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "PyCat.py",
+      "ground_truth": "Sample_scripts\\PyCat.md",
+      "error": "Missing parentheses in call to 'print'. Did you mean print(...)? (<unknown>, line 30)",
+      "mode": "error",
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "script": "QR_Generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\QR_Generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\QR_Generator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "bs4",
+          "selenium"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.037321063394683024,
+        "rationale": "The candidate README is clear but lacks specific details about the QR code's purpose and usage context, making it less complete and helpful compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "resizeimage.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\resizeimage_AI_README.md",
+      "ground_truth": "Sample_scripts\\resizeimage.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "actual": [
+          "PIL",
+          "imageexceptions",
+          "python-resize-image"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.049057412167952015,
+        "rationale": "The candidate README provides a general overview and installation instructions but lacks detailed usage examples and specific function descriptions compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": true,
+          "function_docstrings": 11,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "seam_carver.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\seam_carver_AI_README.md",
+      "ground_truth": "Sample_scripts\\seam_carver.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "energy_functions",
+          "numba",
+          "numpy",
+          "tqdm",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 13,
+        "actual": 12,
+        "hits": 12,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 4,
+        "similarity": 0.01735136514416943,
+        "rationale": "The candidate README is clear and provides a good overview, but lacks some details on the algorithm and future improvements that the reference README includes.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 7,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 7,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Video_editor_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\Video_editor_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Video_editor_bot.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "config",
+          "handlers",
+          "pyrogram"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.013784715183458342,
+        "rationale": "The candidate README provides a clear overview and installation instructions but lacks detailed feature descriptions and deployment options compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "vpc_subnet_calculator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\vpc_subnet_calculator_AI_README.md",
+      "ground_truth": "Sample_scripts\\vpc_subnet_calculator.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "netaddr"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.037037037037037035,
+        "rationale": "The candidate README is clear and well-structured, but it lacks some details on future enhancements and has incomplete sections on contributing and licensing.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "argparse",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Argparse metadata provides structured flag semantics.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "Watermark_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\Watermark_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Watermark_bot.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": [
+          "PIL",
+          "aiohttp",
+          "configs",
+          "core",
+          "hachoir",
+          "pyrogram"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.03374815439780637,
+        "rationale": "The candidate README lacks detailed features, configuration instructions, and specific commands, making it less informative compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": [
+            "No docstrings detected; the model must infer behavior from code structure.",
+            "No environment variables detected; skip the section to avoid hallucination."
+          ]
+        }
+      }
+    },
+    {
+      "script": "wisdom_tree.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval\\ast-openai-openai\\generated\\wisdom_tree_AI_README.md",
+      "ground_truth": "Sample_scripts\\wisdom_tree.md",
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 0.0,
+        "actual": [
+          "brew",
+          "cd",
+          "inject",
+          "sdl2_mixer",
+          "windows-curses",
+          "wisdom-tree"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.03876221498371336,
+        "rationale": "The candidate README provides a clear overview and installation instructions, but lacks detailed usage information and feature descriptions compared to the reference.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 1,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "none",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [
+            "..\\requirements.txt"
+          ],
+          "packages": [
+            "google-generativeai",
+            "groq",
+            "openai"
+          ]
+        },
+        "external_tools": [],
+        "env_var_count": 1,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "Docstrings supply narrative context for the LLM.",
+            "Requirements files can be surfaced directly in installation guidance."
+          ],
+          "risks": []
+        }
+      }
+    }
+  ]
+}
