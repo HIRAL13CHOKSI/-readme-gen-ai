@@ -1,0 +1,1987 @@
+{
+  "run_label": "no-ast-openai-openai",
+  "results": [
+    {
+      "script": "clippy.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\clippy_AI_README.md",
+      "ground_truth": "Sample_scripts\\clippy.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "tkinter",
+          "Frame",
+          "BOTH",
+          "Menu",
+          "TclError",
+          "Label",
+          "RAISED",
+          "SUNKEN",
+          "SOLID",
+          "messagebox",
+          "pyperclip"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 2,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.015,
+        "rationale": "The generated README is clear and provides a good overview of the application, its features, and basic usage instructions. However, it lacks a demo image, detailed installation instructions including the use of virtual environments, and information on running tests or creating standalone applications. These omissions affect its completeness and helpfulness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "currency_converter.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\currency_converter_AI_README.md",
+      "ground_truth": "Sample_scripts\\currency_converter.md",
+      "dependencies": {
+        "precision": 0.09090909090909091,
+        "recall": 0.14285714285714285,
+        "actual": [
+          "a",
+          "create",
+          "dependencies",
+          "optionally",
+          "requests",
+          "source",
+          "virtualenv"
+        ],
+        "predicted": [
+          "argparse",
+          "datetime",
+          "requests",
+          "decimal",
+          "InvalidOperation",
+          "ROUND_HALF_UP",
+          "typing",
+          "Callable",
+          "Dict",
+          "Optional",
+          "Union"
+        ]
+      },
+      "cli": {
+        "detected": 9,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.101,
+        "rationale": "The generated README is clear and provides a good overview of the tool, including installation and usage instructions. However, it lacks some details present in the reference, such as the specific API used for exchange rates, the option to run the tool in a virtual environment, and the ability to use the tool as a module in code. Additionally, the usage section could benefit from more detailed examples and explanations of the command-line interface, including error handling and help commands.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 9,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "CyberScraper.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\CyberScraper_AI_README.md",
+      "ground_truth": "Sample_scripts\\CyberScraper.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "API",
+          "CAPTCHA",
+          "Create",
+          "CyberScrapeless-2077",
+          "CyberScraper",
+          "CyberScraper-2077",
+          "Docker",
+          "GOOGLE_API_KEY",
+          "Gemini",
+          "Get",
+          "Homebrew",
+          "Key",
+          "OPENAI_API_KEY",
+          "OpenAI",
+          "Optional",
+          "PySocks",
+          "SCRAPELESS_API_KEY",
+          "Scrapeless",
+          "Set",
+          "Start",
+          "Tor",
+          "a",
+          "activate",
+          "additional",
+          "advanced",
+          "all",
+          "anti-bot",
+          "apt",
+          "automatic",
+          "bash",
+          "branch",
+          "brew",
+          "bypassing",
+          "cd",
+          "enterprise-grade",
+          "environment",
+          "export",
+          "follow",
+          "from",
+          "in",
+          "integration",
+          "key",
+          "keys",
+          "on",
+          "packages",
+          "playwright",
+          "prefer",
+          "required",
+          "requirements",
+          "requires",
+          "run",
+          "scraping",
+          "service",
+          "services",
+          "set",
+          "solving",
+          "source",
+          "start",
+          "steps",
+          "sudo",
+          "these",
+          "this",
+          "to",
+          "tor",
+          "up",
+          "use",
+          "using",
+          "venv",
+          "virtual",
+          "virtualenv",
+          "with",
+          "your"
+        ],
+        "predicted": [
+          "streamlit",
+          "json",
+          "asyncio",
+          "app",
+          "display_message",
+          "extract_data_from_markdown",
+          "format_data",
+          "get_loading_message",
+          "datetime",
+          "timedelta",
+          "src",
+          "pandas",
+          "base64",
+          "google_auth_oauthlib",
+          "io",
+          "re",
+          "get_redirect_uri",
+          "display_google_sheets_button",
+          "initiate_google_auth",
+          "time",
+          "urllib",
+          "atexit",
+          "os"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 7,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.013,
+        "rationale": "The generated README provides a basic overview and installation instructions but lacks several important details found in the reference. It misses sections on advanced features, Docker installation, and specific branch usage, which are crucial for users. The usage examples are limited and do not cover all functionalities. Additionally, the clarity of explanations could be improved, especially regarding advanced features and configurations.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "docker-db-auto-backup.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\docker-db-auto-backup_AI_README.md",
+      "ground_truth": "Sample_scripts\\docker-db-auto-backup.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "Backups",
+          "HTTP",
+          "Mount",
+          "This",
+          "To",
+          "a",
+          "access",
+          "add",
+          "are",
+          "as",
+          "at",
+          "backup",
+          "based",
+          "be",
+          "by",
+          "can",
+          "change",
+          "compressed",
+          "container",
+          "cron",
+          "cron-style",
+          "croniter",
+          "daily",
+          "dated",
+          "directory",
+          "docker",
+          "documentation",
+          "done",
+          "either",
+          "format",
+          "here",
+          "information",
+          "it",
+          "midnight",
+          "more",
+          "mounting",
+          "name",
+          "not",
+          "of",
+          "on",
+          "override",
+          "please",
+          "provide",
+          "proxy",
+          "requires",
+          "run",
+          "saved",
+          "schedule",
+          "see",
+          "socket",
+          "strings",
+          "this",
+          "through",
+          "to",
+          "using",
+          "will",
+          "your"
+        ],
+        "predicted": [
+          "importlib",
+          "spec_from_loader",
+          "pathlib",
+          "typing",
+          "Callable",
+          "unittest",
+          "pytest"
+        ]
+      },
+      "cli": {
+        "detected": 4,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.056,
+        "rationale": "The generated README provides a basic overview and usage instructions but lacks clarity in certain areas, such as the installation requirements and the specific dependencies needed beyond just `pytest`. It also omits important sections like supported databases with detailed links, example `docker-compose.yml`, and configuration options for scheduling backups. The usage section is somewhat helpful but could be clearer regarding environment variables and their purposes. Overall, it meets some basic requirements but has significant omissions and lacks depth.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 4,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "encrypt.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\encrypt_AI_README.md",
+      "ground_truth": "Sample_scripts\\encrypt.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "Crypto"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 4,
+        "similarity": 0.115,
+        "rationale": "The generated README is clear and provides a good overview of the utility, including installation and usage instructions. However, it lacks some details found in the reference, such as specific examples of file names used in the commands and the mention of the output file name after encryption. The usage section could be more concise and formatted for better readability. Overall, it is strong but has some minor issues and omissions.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "fileorganizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\fileorganizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\fileorganizer.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "sys",
+          "datetime",
+          "extensiondict"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.07,
+        "rationale": "The generated README provides a clear overview and usage instructions, but lacks a structured table of contents and detailed information on supported file types, which are present in the reference. It also does not mention running the script in administrator mode or provide separate commands for different operating systems, which could lead to confusion. Additionally, while it mentions the need for an 'extensiondict.py' file, it does not specify what this file should contain or how to create it, which is a significant omission.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "fmi.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\fmi_AI_README.md",
+      "ground_truth": "Sample_scripts\\fmi.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "requests",
+          "warnings",
+          "bs4"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.065,
+        "rationale": "The generated README is clear and provides a good overview of the functionality, but it lacks some details present in the reference, such as the API key usage and environment variable settings. The installation instructions are also less clear, as it doesn't specify the package name. Additionally, the usage examples could be more comprehensive, and there are no sections for version updates or additional resources like icons. Overall, it is strong but has several omissions.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Local-File-Organizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\Local-File-Organizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\Local-File-Organizer.md",
+      "dependencies": {
+        "precision": 0.1,
+        "recall": 0.013157894736842105,
+        "actual": [
+          "Before",
+          "CPU",
+          "Ensure",
+          "File",
+          "Follow",
+          "GPU",
+          "Installation",
+          "Local",
+          "Metal",
+          "Nexa",
+          "Organizer",
+          "Pillow",
+          "PyMuPDF",
+          "Replace",
+          "SDK",
+          "To",
+          "We",
+          "With",
+          "a",
+          "activated",
+          "actual",
+          "are",
+          "as",
+          "bash",
+          "can",
+          "cd",
+          "cloned",
+          "cloning",
+          "code",
+          "dependencies",
+          "detailed",
+          "directory",
+          "encounter",
+          "environment",
+          "extracted",
+          "file",
+          "from",
+          "have",
+          "in",
+          "individually",
+          "installation",
+          "installed",
+          "installing",
+          "instructions",
+          "issues",
+          "later",
+          "main",
+          "make",
+          "model-related",
+          "nexa",
+          "nexaai",
+          "of",
+          "official",
+          "on",
+          "packages",
+          "path",
+          "please",
+          "post",
+          "project",
+          "pytesseract",
+          "python-docx",
+          "recommend",
+          "refer",
+          "required",
+          "run",
+          "script",
+          "support",
+          "supporting",
+          "sure",
+          "them",
+          "to",
+          "using",
+          "where",
+          "with",
+          "your",
+          "zsh"
+        ],
+        "predicted": [
+          "os",
+          "time",
+          "file_utils",
+          "data_processing_common",
+          "text_data_processing",
+          "image_data_processing",
+          "output_filter",
+          "nexa",
+          "NexaTextInference",
+          "nltk"
+        ]
+      },
+      "cli": {
+        "detected": 3,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.027,
+        "rationale": "The generated README provides a basic overview and usage instructions but lacks critical details such as specific dependencies, installation steps for the SDK, and comprehensive examples. The absence of prerequisites and detailed installation instructions significantly impacts completeness. While the clarity is acceptable, the overall helpfulness is diminished due to missing sections and unclear explanations regarding module requirements.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 3,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "lock_files.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\lock_files_AI_README.md",
+      "ground_truth": "Sample_scripts\\lock_files.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "argparse",
+          "base64",
+          "getpass",
+          "inspect",
+          "multiprocessing",
+          "os",
+          "subprocess",
+          "sys",
+          "threading",
+          "Lock",
+          "Semaphore",
+          "cryptography",
+          "algorithms",
+          "modes",
+          "Queue",
+          "queue"
+        ]
+      },
+      "cli": {
+        "detected": 48,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 4,
+        "similarity": 0.047,
+        "rationale": "The generated README is clear and provides a good overview of the functionality of the script. However, it lacks some details present in the reference, such as specific command-line options and their descriptions, which could enhance understanding. The usage examples are strong, but the installation section could include more context on Python version compatibility and additional dependencies. Overall, it is strong but could benefit from more comprehensive details.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 48,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Multilingual_Text_to_Speech.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\Multilingual_Text_to_Speech_AI_README.md",
+      "ground_truth": "Sample_scripts\\Multilingual_Text_to_Speech.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "time",
+          "datetime",
+          "math",
+          "numpy",
+          "torch",
+          "dataset",
+          "TextToSpeechCollate",
+          "params",
+          "utils",
+          "text",
+          "modules",
+          "TacotronLoss",
+          "PerfectBatchSampler",
+          "to_gpu",
+          "argparse",
+          "re"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 3,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.025,
+        "rationale": "The generated README provides a basic overview and usage instructions for the script, but it lacks several important sections found in the reference README. Key omissions include installation instructions for dependencies via a requirements file, detailed dataset preparation steps, and information about vocoding and inference. The clarity of usage instructions is acceptable, but the overall completeness is significantly lacking, particularly in terms of setup and context for the project. Additionally, the lack of interactive demo links and citation information reduces its helpfulness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Network_Scanner.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\Network_Scanner_AI_README.md",
+      "ground_truth": "Sample_scripts\\Network_Scanner.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "getmac",
+          "prettytable",
+          "datetime",
+          "device",
+          "network",
+          "json",
+          "os",
+          "sys"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.163,
+        "rationale": "The generated README is clear and provides a good overview of the project, but it lacks some details present in the reference, such as installation of virtual environments and specific commands for different operating systems. The usage section is somewhat vague and could benefit from more detailed instructions, especially regarding inputting the network to scan. Additionally, there is no section on contributing or a code of conduct, which could enhance community engagement.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "password_generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\password_generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\password_generator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "string",
+          "copy",
+          "random",
+          "randint",
+          "secrets"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 2,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.06,
+        "rationale": "The generated README provides a clear overview and usage examples, but it lacks some important sections such as installation instructions with package management (e.g., pip), a configuration table for properties, and details on version updates. The usage documentation is somewhat helpful but could be more structured and detailed, especially regarding the available methods and their parameters. Additionally, the absence of a license section and contribution guidelines detracts from its completeness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "pdfmerger.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\pdfmerger_AI_README.md",
+      "ground_truth": "Sample_scripts\\pdfmerger.md",
+      "dependencies": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "actual": [
+          "PyPDF2",
+          "Use",
+          "bash",
+          "be",
+          "beforehand",
+          "installed",
+          "manager",
+          "needs",
+          "package",
+          "to"
+        ],
+        "predicted": [
+          "PyPDF2",
+          "tkinter"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 4,
+        "similarity": 0.08,
+        "rationale": "The generated README is clear and provides a good overview of the application, its features, and installation instructions. However, it lacks a visual element (like an image of the GUI) that could enhance user understanding. The usage section is detailed but could benefit from more explicit instructions on navigating the GUI. Additionally, while it mentions limitations, it could be more comprehensive in addressing potential issues users might face. Overall, it is strong but has some minor omissions and could be improved for completeness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "PyCat.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\PyCat_AI_README.md",
+      "ground_truth": "Sample_scripts\\PyCat.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "sys",
+          "socket",
+          "getopt",
+          "threading",
+          "subprocess",
+          "os",
+          "struct",
+          "netaddr",
+          "IPAddress",
+          "ctypes",
+          "scanner"
+        ]
+      },
+      "cli": {
+        "detected": 4,
+        "actual": 12,
+        "hits": 2,
+        "completeness": 0.16666666666666666
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.05,
+        "rationale": "The generated README is clear and provides a good overview of the tool and its features. However, it lacks some important details such as the specific usage of the network scanning feature and the update regarding the timer in the main loop, which is mentioned in the reference. Additionally, while the usage section is present, it could benefit from more structured examples and clearer explanations of the options. The mention of Python 2 compatibility is a good note, but it could be more prominently addressed in the installation section. Overall, it is strong but has several issues and omissions.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 4,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "QR_Generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\QR_Generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\QR_Generator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "bs4",
+          "selenium",
+          "PIL",
+          "base64",
+          "time",
+          "os"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.064,
+        "rationale": "The generated README provides a clear overview and basic usage instructions, but it lacks important sections such as a demonstration, troubleshooting tips, and specific installation instructions for Python. It also does not clarify the urgency of the QR code's validity period, which is crucial for users. Additionally, it could benefit from more detailed explanations and examples to enhance understanding.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "resizeimage.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\resizeimage_AI_README.md",
+      "ground_truth": "Sample_scripts\\resizeimage.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "python-resize-image",
+          "using"
+        ],
+        "predicted": [
+          "__future__",
+          "math",
+          "sys",
+          "functools",
+          "PIL"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 4,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.049,
+        "rationale": "The generated README provides a basic overview and usage examples, but lacks several important sections found in the reference, such as detailed API references for each function, specific dependencies, and a clear installation guide. The usage documentation is somewhat clear but could benefit from more structured examples and explanations. Additionally, it does not include sections on testing, contributing, or support, which are crucial for a comprehensive README.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "seam_carver.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\seam_carver_AI_README.md",
+      "ground_truth": "Sample_scripts\\seam_carver.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "__future__",
+          "argparse",
+          "os",
+          "sys",
+          "numba",
+          "numpy",
+          "PIL",
+          "tqdm",
+          "energy_functions",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 12,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.04,
+        "rationale": "The generated README is clear and provides a good overview of the Seam Carver utility, including features, installation instructions, and usage examples. However, it lacks a detailed explanation of the algorithm, which is present in the reference README. Additionally, it does not mention the recommended installation method (conda) or provide a requirements file, which could help users set up the environment more easily. The usage section is strong, but the absence of a dedicated 'Dependencies' section and a more comprehensive 'Limitations or Notes' section detracts from its completeness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Video_editor_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\Video_editor_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Video_editor_bot.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "logging",
+          "pyrogram",
+          "filters"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.036,
+        "rationale": "The generated README is clear and provides a good overview of the bot's features and installation instructions. However, it lacks some important sections such as a demo link, support group, and detailed usage examples. The usage section could be more comprehensive, and it does not mention additional dependencies or provide a project structure, which would enhance understanding. Overall, it is strong but has several omissions that affect completeness and helpfulness.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "vpc_subnet_calculator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\vpc_subnet_calculator_AI_README.md",
+      "ground_truth": "Sample_scripts\\vpc_subnet_calculator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "__future__",
+          "argparse",
+          "math",
+          "netaddr"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.032,
+        "rationale": "The generated README is clear and provides a good overview of the VPC Subnet Calculator, including features, installation instructions, and usage examples. However, it lacks some important sections such as badges for build status and coverage, which enhance credibility and professionalism. The usage documentation is straightforward but could benefit from more detailed examples or explanations of the output. Additionally, the reference README includes a TODO section that outlines future improvements, which is missing in the generated version.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Watermark_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\Watermark_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Watermark_bot.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "time",
+          "json",
+          "random",
+          "asyncio",
+          "aiohttp",
+          "hachoir",
+          "PIL",
+          "core",
+          "delete_trash",
+          "pyrogram",
+          "filters",
+          "configs",
+          "humanbytes",
+          "InlineKeyboardButton",
+          "CallbackQuery",
+          "MessageNotModified"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.016,
+        "rationale": "The generated README is clear and provides a good overview of the bot's features and usage. However, it lacks some important sections present in the reference, such as detailed configuration settings, a demo link, and deployment instructions. The usage section could also benefit from more clarity on the commands and their functions. Additionally, it does not mention the need for an API ID and API hash, which are crucial for setting up the bot.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "wisdom_tree.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-openai-openai\\generated\\wisdom_tree_AI_README.md",
+      "ground_truth": "Sample_scripts\\wisdom_tree.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "This",
+          "Wisdom-tree",
+          "allows",
+          "anywhere",
+          "app",
+          "brew",
+          "cd",
+          "from",
+          "inject",
+          "installed",
+          "is",
+          "mac",
+          "make",
+          "music",
+          "play",
+          "please",
+          "run",
+          "sdl2_mixer",
+          "sure",
+          "to",
+          "uses",
+          "vlc",
+          "windows-curses",
+          "wisdom-tree"
+        ],
+        "predicted": [
+          "curses",
+          "os",
+          "threading",
+          "time",
+          "pathlib",
+          "typing",
+          "wisdom_tree",
+          "StateManager",
+          "get_user_config_directory"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 3,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.011,
+        "rationale": "The generated README provides a basic overview and installation instructions, but it lacks several important sections found in the reference, such as detailed usage instructions, examples, and installation from various sources (like PyPi and GitHub). It also misses screenshots and a showcase link, which enhance clarity and engagement. The usage section is weak and does not cover all functionalities or provide clear instructions on custom quotes. Overall, while it is somewhat clear, it is incomplete and lacks depth.",
+        "judge": "openai"
+      },
+      "generation": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    }
+  ],
+  "summary": {
+    "sample_size": 21,
+    "dependencies_precision": {
+      "avg": 0.033,
+      "min": 0.0,
+      "max": 0.5,
+      "median": 0.0
+    },
+    "dependencies_recall": {
+      "avg": 0.012,
+      "min": 0.0,
+      "max": 0.143,
+      "median": 0.0
+    },
+    "cli_completeness": {
+      "avg": 0.579,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    "description_clarity": {
+      "avg": 3.619,
+      "min": 3,
+      "max": 4,
+      "median": 4
+    },
+    "description_completeness": {
+      "avg": 2.714,
+      "min": 2,
+      "max": 3,
+      "median": 3
+    },
+    "description_helpfulness": {
+      "avg": 3.143,
+      "min": 3,
+      "max": 4,
+      "median": 3
+    },
+    "dependencies_precision_avg": 0.033,
+    "dependencies_recall_avg": 0.012,
+    "cli_completeness_avg": 0.579,
+    "description_clarity_avg": 3.619,
+    "description_completeness_avg": 2.714,
+    "description_helpfulness_avg": 3.143
+  },
+  "signal_insights": {
+    "has_cli_flags": {
+      "clarity": 3.6,
+      "completeness": 2.7,
+      "helpfulness": 3.15,
+      "cli_completeness": 0.608,
+      "dep_precision": 0.035,
+      "dep_recall": 0.013,
+      "sample_size": 20
+    },
+    "no_cli_flags": {
+      "clarity": 4.0,
+      "completeness": 3.0,
+      "helpfulness": 3.0,
+      "cli_completeness": 0.0,
+      "dep_precision": 0.0,
+      "dep_recall": 0.0,
+      "sample_size": 1
+    },
+    "has_imports": {
+      "clarity": 3.619,
+      "completeness": 2.714,
+      "helpfulness": 3.143,
+      "cli_completeness": 0.579,
+      "dep_precision": 0.033,
+      "dep_recall": 0.012,
+      "sample_size": 21
+    },
+    "no_imports": {
+      "clarity": 0.0,
+      "completeness": 0.0,
+      "helpfulness": 0.0,
+      "cli_completeness": 0.0,
+      "dep_precision": 0.0,
+      "dep_recall": 0.0,
+      "sample_size": 0
+    },
+    "no_ast": {
+      "clarity": 3.619,
+      "completeness": 2.714,
+      "helpfulness": 3.143,
+      "cli_completeness": 0.579,
+      "dep_precision": 0.033,
+      "dep_recall": 0.012,
+      "sample_size": 21
+    }
+  },
+  "examples": {
+    "top_helpfulness": [
+      {
+        "script": "encrypt.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 4.0,
+        "completeness": 3.0,
+        "helpfulness": 4.0,
+        "rationale": "The generated README is clear and provides a good overview of the utility, including installation and usage instructions. However, it lacks some details found in the reference, such as specific examples of file names us\u2026"
+      },
+      {
+        "script": "lock_files.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 4.0,
+        "completeness": 3.0,
+        "helpfulness": 4.0,
+        "rationale": "The generated README is clear and provides a good overview of the functionality of the script. However, it lacks some details present in the reference, such as specific command-line options and their descriptions, which\u2026"
+      },
+      {
+        "script": "pdfmerger.py",
+        "dep_precision": 0.5,
+        "dep_recall": 0.1,
+        "cli_completeness": 1.0,
+        "clarity": 4.0,
+        "completeness": 3.0,
+        "helpfulness": 4.0,
+        "rationale": "The generated README is clear and provides a good overview of the application, its features, and installation instructions. However, it lacks a visual element (like an image of the GUI) that could enhance user understan\u2026"
+      }
+    ],
+    "bottom_dependencies": [
+      {
+        "script": "clippy.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 0.0,
+        "clarity": 4.0,
+        "completeness": 3.0,
+        "helpfulness": 3.0,
+        "rationale": "The generated README is clear and provides a good overview of the application, its features, and basic usage instructions. However, it lacks a demo image, detailed installation instructions including the use of virtual \u2026"
+      },
+      {
+        "script": "CyberScraper.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 0.0,
+        "clarity": 3.0,
+        "completeness": 2.0,
+        "helpfulness": 3.0,
+        "rationale": "The generated README provides a basic overview and installation instructions but lacks several important details found in the reference. It misses sections on advanced features, Docker installation, and specific branch \u2026"
+      },
+      {
+        "script": "docker-db-auto-backup.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 3.0,
+        "completeness": 2.0,
+        "helpfulness": 3.0,
+        "rationale": "The generated README provides a basic overview and usage instructions but lacks clarity in certain areas, such as the installation requirements and the specific dependencies needed beyond just `pytest`. It also omits im\u2026"
+      }
+    ]
+  }
+}

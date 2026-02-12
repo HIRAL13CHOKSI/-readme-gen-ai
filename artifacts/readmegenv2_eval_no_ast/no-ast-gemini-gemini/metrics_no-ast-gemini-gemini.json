@@ -1,0 +1,1987 @@
+{
+  "run_label": "no-ast-gemini-gemini",
+  "results": [
+    {
+      "script": "clippy.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\clippy_AI_README.md",
+      "ground_truth": "Sample_scripts\\clippy.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "tkinter",
+          "Frame",
+          "BOTH",
+          "Menu",
+          "TclError",
+          "Label",
+          "RAISED",
+          "SUNKEN",
+          "SOLID",
+          "messagebox",
+          "pyperclip"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 2,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.015,
+        "rationale": "The generated README is exceptionally clear and well-written for the scope it covers \u2013 describing a single Python script. Its explanations of features, usage, examples, and limitations are professional-quality (Clarity: 5).\n\nHowever, when compared to the reference README, it falls significantly short in completeness and helpfulness for a full project. The reference README details a project with a `setup.py` for installation, testing, and building a standalone macOS application using `py2app`, and crucially, includes a demo GIF. The generated README assumes a single-file script distribution, completely missing:\n*   A visual demo (GIF) which is vital for quick understanding.\n*   Instructions for setting up a virtual environment (a best practice).\n*   The project's installation process via `setup.py`.\n*   Instructions for running tests.\n*   Details on how to build a standalone application (a significant feature in the reference).\n*   Badges and external article links.\nThese omissions represent fundamental aspects of the project's documentation as presented in the reference, making the generated README weak in overall completeness (Completeness: 2).\n\nWhile the generated README is very helpful for understanding and running the basic script, its lack of a visual demo, instructions for project setup (like `setup.py`), testing, and especially standalone application building, severely reduces its helpfulness when judged against the broader scope of the reference. It helps with basic usage but misses many important aspects of project interaction and distribution (Helpfulness: 3).",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "currency_converter.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\currency_converter_AI_README.md",
+      "ground_truth": "Sample_scripts\\currency_converter.md",
+      "dependencies": {
+        "precision": 0.09090909090909091,
+        "recall": 0.14285714285714285,
+        "actual": [
+          "a",
+          "create",
+          "dependencies",
+          "optionally",
+          "requests",
+          "source",
+          "virtualenv"
+        ],
+        "predicted": [
+          "argparse",
+          "datetime",
+          "requests",
+          "decimal",
+          "InvalidOperation",
+          "ROUND_HALF_UP",
+          "typing",
+          "Callable",
+          "Dict",
+          "Optional",
+          "Union"
+        ]
+      },
+      "cli": {
+        "detected": 9,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.071,
+        "rationale": "The generated README is exceptionally clear and well-structured for the aspects it covers. The installation instructions are precise, the argument definitions are comprehensive, and the usage examples are very helpful, including interactive mode and simple output. However, it is significantly incomplete compared to the reference README. It entirely misses two major sections present in the reference: 'How to use as a module in code', which includes instructions for installing as a package and provides Python API examples, and 'Run in Docker', which details how to build and run the application in a container. These omissions represent fundamental alternative ways to use and deploy the application, severely impacting its completeness and overall helpfulness for users looking for these functionalities.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 9,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "CyberScraper.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\CyberScraper_AI_README.md",
+      "ground_truth": "Sample_scripts\\CyberScraper.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "API",
+          "CAPTCHA",
+          "Create",
+          "CyberScrapeless-2077",
+          "CyberScraper",
+          "CyberScraper-2077",
+          "Docker",
+          "GOOGLE_API_KEY",
+          "Gemini",
+          "Get",
+          "Homebrew",
+          "Key",
+          "OPENAI_API_KEY",
+          "OpenAI",
+          "Optional",
+          "PySocks",
+          "SCRAPELESS_API_KEY",
+          "Scrapeless",
+          "Set",
+          "Start",
+          "Tor",
+          "a",
+          "activate",
+          "additional",
+          "advanced",
+          "all",
+          "anti-bot",
+          "apt",
+          "automatic",
+          "bash",
+          "branch",
+          "brew",
+          "bypassing",
+          "cd",
+          "enterprise-grade",
+          "environment",
+          "export",
+          "follow",
+          "from",
+          "in",
+          "integration",
+          "key",
+          "keys",
+          "on",
+          "packages",
+          "playwright",
+          "prefer",
+          "required",
+          "requirements",
+          "requires",
+          "run",
+          "scraping",
+          "service",
+          "services",
+          "set",
+          "solving",
+          "source",
+          "start",
+          "steps",
+          "sudo",
+          "these",
+          "this",
+          "to",
+          "tor",
+          "up",
+          "use",
+          "using",
+          "venv",
+          "virtual",
+          "virtualenv",
+          "with",
+          "your"
+        ],
+        "predicted": [
+          "streamlit",
+          "json",
+          "asyncio",
+          "app",
+          "display_message",
+          "extract_data_from_markdown",
+          "format_data",
+          "get_loading_message",
+          "datetime",
+          "timedelta",
+          "src",
+          "pandas",
+          "base64",
+          "google_auth_oauthlib",
+          "io",
+          "re",
+          "get_redirect_uri",
+          "display_google_sheets_button",
+          "initiate_google_auth",
+          "time",
+          "urllib",
+          "atexit",
+          "os"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 7,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 2,
+        "completeness": 1,
+        "helpfulness": 1,
+        "similarity": 0.034,
+        "rationale": "The generated README is severely incomplete and misleading compared to the human reference. Major sections are entirely missing, including the existence and details of the 'Scrapeless Integration Branch,' comprehensive Docker installation instructions, Tor Network support, a detailed step-by-step guide for Google Sheets authentication, troubleshooting, FAQ, contributing guidelines, contact information, and a legal disclaimer. The 'Features' section omits many capabilities present in the reference (e.g., multi-format export beyond CSV/Excel, stealth mode, caching). The 'Installation' section incorrectly states Python 3.8+ when the reference specifies 3.10+, and lists dependencies incompletely, missing `ollama` and `PySocks` among others for specific features. A critical clarity issue is the instruction to run `streamlit run CyberScraper.py` when the reference uses `main.py`, which would lead to execution errors. The omission of the second, enterprise-grade version of the tool dramatically reduces the helpfulness and completeness, as this is a core differentiator in the original project. Users relying on this README would be unable to leverage many of the project's advertised features and would face significant obstacles in setup and deployment.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "docker-db-auto-backup.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\docker-db-auto-backup_AI_README.md",
+      "ground_truth": "Sample_scripts\\docker-db-auto-backup.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "Backups",
+          "HTTP",
+          "Mount",
+          "This",
+          "To",
+          "a",
+          "access",
+          "add",
+          "are",
+          "as",
+          "at",
+          "backup",
+          "based",
+          "be",
+          "by",
+          "can",
+          "change",
+          "compressed",
+          "container",
+          "cron",
+          "cron-style",
+          "croniter",
+          "daily",
+          "dated",
+          "directory",
+          "docker",
+          "documentation",
+          "done",
+          "either",
+          "format",
+          "here",
+          "information",
+          "it",
+          "midnight",
+          "more",
+          "mounting",
+          "name",
+          "not",
+          "of",
+          "on",
+          "override",
+          "please",
+          "provide",
+          "proxy",
+          "requires",
+          "run",
+          "saved",
+          "schedule",
+          "see",
+          "socket",
+          "strings",
+          "this",
+          "through",
+          "to",
+          "using",
+          "will",
+          "your"
+        ],
+        "predicted": [
+          "importlib",
+          "spec_from_loader",
+          "pathlib",
+          "typing",
+          "Callable",
+          "unittest",
+          "pytest"
+        ]
+      },
+      "cli": {
+        "detected": 4,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.055,
+        "rationale": "The generated README clearly and explicitly states that it is a README for a test suite (`docker-db-auto-backup.py`) and not the actual database backup utility itself (`db-auto-backup.py`). It makes this distinction upfront and throughout the document, which is excellent for clarity given the unusual premise. It also clearly outlines how functionality is 'inferred' from the tests.\n\nHowever, when comparing its content to the *reference README* (which describes the actual utility), it falls short on completeness and helpfulness for someone looking to use the *utility*. While the generated README does a good job of inferring many features (multi-DB, compression, some notification hooks), it misses several key pieces of information present in the reference about the *actual utility's deployment and functionality*:\n\n*   **Missing Core Deployment Instructions**: The most significant omission is the `docker-compose.yml` example, which is crucial for deploying the utility as a Docker container. The generated README only provides `pytest` usage for the test suite.\n*   **Missing Specific Environment Variables for Utility**: It omits variables like `$SCHEDULE` for cron-style scheduling, `$BACKUP_DIR` (though it mentions a default `backups` subdirectory), and `$INCLUDE_LOGS` for success hooks.\n*   **Missing Utility Execution Modes**: The 'Oneshot' execution mode for the utility is not mentioned.\n*   **Less Detailed Supported Databases**: While it lists the main database types, it lacks the detailed list of specific variants (e.g., TimescaleDB, pgvecto.rs) found in the reference.\n*   **Missing CI Badge**: A minor but presentational omission.\n\nFor completeness, it successfully describes *itself* (the test suite) and its dependencies. However, since the prompt asks to punish missing sections compared to the reference, and the reference describes the *utility*, the generated README is incomplete in conveying all the information about the utility that the reference provides.\n\nFor helpfulness, it's very helpful for understanding and running the *test suite*. However, for someone trying to *use* or *deploy the actual database backup utility*, it's much less helpful than the reference because it lacks the direct deployment instructions and examples, and explicitly notes that the actual utility is not provided with the script.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 4,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "encrypt.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\encrypt_AI_README.md",
+      "ground_truth": "Sample_scripts\\encrypt.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "Crypto"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 5,
+        "helpfulness": 5,
+        "similarity": 0.068,
+        "rationale": "The generated README is exceptionally clear, complete, and helpful when compared to the reference. It provides a detailed overview, a comprehensive list of features, and crucial installation instructions (including dependencies, which are completely missing from the reference). The usage section is well-explained with practical examples for both encryption and decryption. Furthermore, the 'Limitations or Notes' section adds significant value by discussing important considerations like interactivity, password security, and padding, none of which are present in the reference. The generated README is professional-quality, addresses all potential user questions, and leaves no important issues unaddressed, whereas the reference is extremely minimal, lacking essential information for setup and understanding.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "fileorganizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\fileorganizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\fileorganizer.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "sys",
+          "datetime",
+          "extensiondict"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 5,
+        "helpfulness": 5,
+        "similarity": 0.035,
+        "rationale": "The generated README is exceptional. It provides a clear overview, detailed features, and most importantly, comprehensive installation and usage instructions. The inclusion of the `extensiondict.py` example content is incredibly helpful for setup. The example command and the detailed 'before and after' directory structure clearly illustrate the script's functionality. Furthermore, the 'Limitations or Notes' section proactively addresses critical aspects like OS-specificity, file movement behavior, and interactive prompts, making it very robust. In comparison, the human reference is significantly less detailed. It lacks concrete installation steps beyond 'save the project,' doesn't explain how the '1406 supported extensions' are managed or configured, and misses a crucial example of the output structure. Its 'no dependencies' claim feels oversimplified given the need for file type mapping. The generated README is superior in every aspect, providing all necessary information for a user to understand, install, and effectively use the script.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "fmi.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\fmi_AI_README.md",
+      "ground_truth": "Sample_scripts\\fmi.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "requests",
+          "warnings",
+          "bs4"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 4,
+        "helpfulness": 5,
+        "similarity": 0.031,
+        "rationale": "The generated README is exceptionally clear and helpful, especially considering the context of `fmi.py` being a module requiring a companion `observation.py` file. It goes to great lengths to explain this dependency, provide installation instructions for external libraries, and offer detailed usage examples with code snippets for initialization, observations, forecasts, and station fetching.\n\nThe 'Limitations or Notes' section is a strong addition, proactively addressing potential issues and design decisions (like API key deprecation and error handling).\n\nHowever, in terms of completeness compared to the reference, the generated README has a couple of notable omissions:\n1.  **Missing `fmisid` and `wmo` parameters**: The reference explicitly mentions the ability to specify locations using `fmisid` or `wmo` for `observations()` and `forecast()` calls (highlighted as 'New in 1.1.0'). This is a valuable feature for precise station targeting, which is not documented in the generated README.\n2.  **Missing Forecast icon properties**: The reference details `.icon` and `.icon_as_svg` properties on `Forecast` objects for accessing weather symbols, which the generated README does not cover.\n\nWhile the generated README adds significant value in explaining its specific module context, the absence of documentation for these functional features, which are present in the reference, slightly detracts from its overall completeness. Despite these omissions, its clarity and comprehensive guidance for setup and basic usage are outstanding, making it highly helpful.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Local-File-Organizer.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\Local-File-Organizer_AI_README.md",
+      "ground_truth": "Sample_scripts\\Local-File-Organizer.md",
+      "dependencies": {
+        "precision": 0.1,
+        "recall": 0.013157894736842105,
+        "actual": [
+          "Before",
+          "CPU",
+          "Ensure",
+          "File",
+          "Follow",
+          "GPU",
+          "Installation",
+          "Local",
+          "Metal",
+          "Nexa",
+          "Organizer",
+          "Pillow",
+          "PyMuPDF",
+          "Replace",
+          "SDK",
+          "To",
+          "We",
+          "With",
+          "a",
+          "activated",
+          "actual",
+          "are",
+          "as",
+          "bash",
+          "can",
+          "cd",
+          "cloned",
+          "cloning",
+          "code",
+          "dependencies",
+          "detailed",
+          "directory",
+          "encounter",
+          "environment",
+          "extracted",
+          "file",
+          "from",
+          "have",
+          "in",
+          "individually",
+          "installation",
+          "installed",
+          "installing",
+          "instructions",
+          "issues",
+          "later",
+          "main",
+          "make",
+          "model-related",
+          "nexa",
+          "nexaai",
+          "of",
+          "official",
+          "on",
+          "packages",
+          "path",
+          "please",
+          "post",
+          "project",
+          "pytesseract",
+          "python-docx",
+          "recommend",
+          "refer",
+          "required",
+          "run",
+          "script",
+          "support",
+          "supporting",
+          "sure",
+          "them",
+          "to",
+          "using",
+          "where",
+          "with",
+          "your",
+          "zsh"
+        ],
+        "predicted": [
+          "os",
+          "time",
+          "file_utils",
+          "data_processing_common",
+          "text_data_processing",
+          "image_data_processing",
+          "output_filter",
+          "nexa",
+          "NexaTextInference",
+          "nltk"
+        ]
+      },
+      "cli": {
+        "detected": 3,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.014,
+        "rationale": "The generated README is clear and well-structured, providing good overviews, features, and detailed usage instructions with examples. However, it is significantly incomplete in its installation guide, which severely impacts its overall helpfulness.\n\nKey missing elements compared to the reference:\n1.  **Critical External Dependency**: It completely omits the requirement and installation steps for **Tesseract OCR**, which is essential for `pytesseract` and content-based organization of images/PDFs. This is a major blocker for users.\n2.  **Missing Python Packages**: While it lists `nltk` and `nexa`, it fails to mention other crucial packages like `Pillow`, `PyMuPDF`, and `python-docx` that are necessary for supported file types. It does not provide a `requirements.txt` based installation, which is standard practice.\n3.  **Environment Setup**: It lacks guidance on setting up a dedicated Python environment (e.g., using Conda as the reference suggests) and cloning the repository with `git clone`.\n4.  **Specific Python Version**: The reference specifies Python 3.12, while the generated README is less precise (\"3.x recommended\").\n5.  **Project Context**: It misses important sections like 'Supported File Types', 'Updates', 'Roadmap', and 'License', which the reference provides and adds significant value to the project's overview and user expectations.\n6.  **Visual Aids**: The reference's 'Before/After' examples are very helpful visual aids that the generated README lacks.\n\nWhile the usage instructions are good, the significant omissions in the installation section mean a user would likely struggle or fail to get the application running, making the README not very helpful despite its clear explanations.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 3,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "lock_files.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\lock_files_AI_README.md",
+      "ground_truth": "Sample_scripts\\lock_files.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "argparse",
+          "base64",
+          "getpass",
+          "inspect",
+          "multiprocessing",
+          "os",
+          "subprocess",
+          "sys",
+          "threading",
+          "Lock",
+          "Semaphore",
+          "cryptography",
+          "algorithms",
+          "modes",
+          "Queue",
+          "queue"
+        ]
+      },
+      "cli": {
+        "detected": 48,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.105,
+        "rationale": "The generated README is well-structured and clear in its presentation, with good use of headings for Features, Installation, Usage, and Limitations. The examples are clear and easy to follow.\n\nHowever, it falls short on completeness compared to the human reference. It is missing the entire 'Download and Test' section, which is crucial for developers and contributors to get the project running and verify its functionality. It also completely omits the 'Internals' section, which provides valuable insight into the core AESCipher class and its implementation details. Additionally, the explanations in the 'Overview' are less detailed, and the descriptions for individual options in the 'Usage' section are less verbose and comprehensive than those found in the reference's `lock_files.py -h` output. The project badges are also missing. While the generated README correctly identifies `cryptography` as a dependency (implying an update from the reference's `pycrypto`), the overall content volume and depth are significantly less.\n\nIn terms of helpfulness, the generated README provides sufficient information for basic installation and usage, including clear examples and important warnings. However, the absence of sections covering testing and internal implementation details reduces its helpfulness for a broader audience, particularly developers or those seeking a deeper understanding of the tool.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 48,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Multilingual_Text_to_Speech.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\Multilingual_Text_to_Speech_AI_README.md",
+      "ground_truth": "Sample_scripts\\Multilingual_Text_to_Speech.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "time",
+          "datetime",
+          "math",
+          "numpy",
+          "torch",
+          "dataset",
+          "TextToSpeechCollate",
+          "params",
+          "utils",
+          "text",
+          "modules",
+          "TacotronLoss",
+          "PerfectBatchSampler",
+          "to_gpu",
+          "argparse",
+          "re"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 3,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.021,
+        "rationale": "The generated README provides clear explanations for the features and command-line arguments of the `Multilingual_Text_to_Speech.py` script. The usage examples are well-structured and helpful for understanding how to invoke the script. However, the clarity suffers due to an incomplete dependency list, only mentioning PyTorch and NumPy when a `requirements.txt` file (implied by the reference) would contain more. \n\nCompleteness is severely lacking. It entirely misses critical sections present in the reference, such as: instructions for cloning the repository, comprehensive external dependency installation (e.g., via `requirements.txt`), crucial steps for downloading and preparing datasets (CSS10, Common Voice, spectrogram generation), inference instructions with `synthesize.py` examples, vocoding setup, links to pre-trained models, interactive demos, research papers, synthesized samples, and a citation. It also lacks the visual architecture diagram found in the reference. While it correctly identifies that the script is 'training only,' it doesn't provide the necessary context or instructions for using the *trained* model.\n\nHelpfulness is low because, despite clear explanations of the script's direct functionality, a user attempting to set up and run the project from scratch would be unable to do so based solely on this README. The absence of data acquisition, full dependency management, and inference instructions makes it impractical for real-world use.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Network_Scanner.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\Network_Scanner_AI_README.md",
+      "ground_truth": "Sample_scripts\\Network_Scanner.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "getmac",
+          "prettytable",
+          "datetime",
+          "device",
+          "network",
+          "json",
+          "os",
+          "sys"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.151,
+        "rationale": "The generated README is well-structured and clear in its feature descriptions and explanation of the `data/devices.json` file. The example output is also helpful. However, it suffers from significant omissions that impact its completeness and helpfulness.\n\n**Completeness Issues:**\n1.  **Missing Core Dependency:** The most critical omission is the `nmap` (or `python-nmap`) dependency, which is essential for network scanning as indicated by the reference README (`brew install nmap`, `pip install python-nmap`). The generated README only lists `getmac` and `prettytable`.\n2.  **Missing Virtual Environment Setup:** The reference provides clear instructions for creating and activating a virtual environment, which is a best practice for Python projects.\n3.  **Missing Network IP Input:** The reference explicitly states that the user needs to input the network IP (e.g., `192.168.1.1`). The generated README only mentions 'scanning the local network' without any instruction on how the network range is determined or if user input is required, which is a crucial usage detail.\n4.  **Missing Log File Format:** The reference includes a detailed example of the log file content, which helps users understand the output beyond the console.\n5.  **Missing Important Usage Notes:** The reference includes notes about scanning taking a while and potentially needing to be run multiple times to get all devices, which manage user expectations.\n6.  **Missing 'Contributing' Section:** A common section for open-source projects.\n\n**Helpfulness Issues:**\nDue to the missing core dependency and the lack of instruction regarding network IP input, a new user would likely struggle to get the script running correctly. The absence of virtual environment setup instructions also makes the installation less robust. While the parts that *are* present are clear, the critical missing information makes the README largely unhelpful for a successful first-time setup and usage experience.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "password_generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\password_generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\password_generator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "string",
+          "copy",
+          "random",
+          "randint",
+          "secrets"
+        ]
+      },
+      "cli": {
+        "detected": 0,
+        "actual": 2,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.036,
+        "rationale": "The generated README is exceptionally clear, well-structured, and provides detailed, well-explained examples with an excellent 'Limitations or Notes' section. The language is professional, and the properties table is very informative.\n\nHowever, the README suffers from a critical flaw in completeness and helpfulness: it fundamentally misrepresents the project's distribution and installation method compared to the reference. The reference README clearly indicates a Python package installed via `pip install random-password-generator`, while the generated README describes a 'single-file Python script' that users should 'download'. This omission of the `pip install` instruction and the provision of incorrect installation steps makes the README highly unhelpful for a user trying to get started with the actual project the reference describes. Furthermore, it misses standard sections like 'Contributions' and 'License', as well as the badges and specific update history present in the reference. While some content (like 'Features' and 'Examples') is expanded and improved, the core missing installation instruction significantly impacts its overall utility relative to the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 0,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "pdfmerger.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\pdfmerger_AI_README.md",
+      "ground_truth": "Sample_scripts\\pdfmerger.md",
+      "dependencies": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "actual": [
+          "PyPDF2",
+          "Use",
+          "bash",
+          "be",
+          "beforehand",
+          "installed",
+          "manager",
+          "needs",
+          "package",
+          "to"
+        ],
+        "predicted": [
+          "PyPDF2",
+          "tkinter"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 4,
+        "helpfulness": 4,
+        "similarity": 0.03,
+        "rationale": "The generated README is exceptionally clear, professional, and easy to understand, providing detailed explanations for every aspect. It significantly expands upon the reference README by including comprehensive sections like 'Features', detailed step-by-step 'Usage' instructions, practical 'Examples', and important 'Limitations or Notes'. This makes it a far more informative and useful document overall. However, it misses the crucial screenshot (`GUI.jpg`) that was present in the reference. For a GUI application, a visual aid like a screenshot is a moderate omission that affects its completeness and immediate helpfulness, preventing a perfect score, despite the outstanding textual content.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "PyCat.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\PyCat_AI_README.md",
+      "ground_truth": "Sample_scripts\\PyCat.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "sys",
+          "socket",
+          "getopt",
+          "threading",
+          "subprocess",
+          "os",
+          "struct",
+          "netaddr",
+          "IPAddress",
+          "ctypes",
+          "scanner"
+        ]
+      },
+      "cli": {
+        "detected": 4,
+        "actual": 12,
+        "hits": 2,
+        "completeness": 0.16666666666666666
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 5,
+        "helpfulness": 5,
+        "similarity": 0.023,
+        "rationale": "The generated README is exceptionally clear, complete, and helpful, far surpassing the human reference. It provides a comprehensive overview, a detailed feature list, and clear installation instructions, including external dependencies (`netaddr`) and the required Python 2 environment. The usage section is exhaustive, with multiple examples for every mode (client, server, shell, execute, upload), which is significantly more detailed than the reference. Crucially, the 'Limitations or Notes' section is outstanding: it identifies and clearly explains critical bugs inferred from the code (e.g., `server_loop` not being called, `scanner.py` being external and its invocation being incorrect), which is incredibly helpful for any user attempting to run or debug the script. The reference, on the other hand, is sparse, missing installation instructions, a detailed feature list, and comprehensive usage examples. It also refers to a 'scanner.py' as if it were integral, without detailing its absence or operational flaws as the generated README does. The generated README is essentially a professional-quality document for understanding and troubleshooting the given script.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 4,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "QR_Generator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\QR_Generator_AI_README.md",
+      "ground_truth": "Sample_scripts\\QR_Generator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "bs4",
+          "selenium",
+          "PIL",
+          "base64",
+          "time",
+          "os"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 1,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 4,
+        "helpfulness": 5,
+        "similarity": 0.017,
+        "rationale": "This generated README is of exceptional, professional quality. Its clarity is outstanding, with well-organized sections, precise language, and highly detailed explanations for every step from overview to usage and limitations. It significantly surpasses the reference in providing in-depth information about features, installation (especially image assets and directory structure), and the script's operational flow.\n\nFor completeness, it scores a strong 4. It provides far more textual detail and structure than the reference, making it very comprehensive. However, it misses a few key elements present in the reference:\n1.  **Visual Demonstrations**: The reference includes a screenshot and a GIF, which are incredibly helpful for understanding the output and process. The generated README only describes these in text.\n2.  **QR Code Expiration**: The crucial detail that the 'QR Code only lasts about 2 minutes' is omitted.\n3.  **Dependency/Execution Helpers**: It doesn't mention `requirements.txt` or `.bat` files for dependency installation or script execution, which are common practices noted in the reference.\nDespite these omissions, the textual completeness regarding setup, usage, features, and limitations is superior.\n\nFor helpfulness, it receives a 5. The detailed, step-by-step instructions for installation, including specific image asset requirements and a clear directory structure, are exceptionally helpful. The comprehensive usage guide, coupled with an 'Examples' section showing console output and a 'Limitations or Notes' section explaining potential issues and the script's purpose, makes it incredibly easy for a user to understand, set up, and run the script effectively. The level of detail provided proactively addresses many potential user questions and issues, making it highly actionable.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "resizeimage.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\resizeimage_AI_README.md",
+      "ground_truth": "Sample_scripts\\resizeimage.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "python-resize-image",
+          "using"
+        ],
+        "predicted": [
+          "__future__",
+          "math",
+          "sys",
+          "functools",
+          "PIL"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 4,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 4,
+        "completeness": 2,
+        "helpfulness": 3,
+        "similarity": 0.058,
+        "rationale": "The generated README provides excellent clarity on how to install and use the module, particularly with its detailed explanation of the `imageexceptions.py` import and immediately runnable usage examples that create dummy images. This significantly lowers the barrier to entry for new users. However, it lacks clarity regarding the `validate` parameter and the separate `validate` function, which are important features detailed in the reference.\n\nFor completeness, the generated README is significantly lacking. It omits several standard README sections present in the reference, such as badges, explicit Python version dependencies, a dedicated API Reference section with full parameter lists for each function, a Tests section, a Contribute section, a Support section, and the License information. While its 'Installation' and 'Usage' are very thorough, the overall absence of these critical project-level sections makes it incomplete as a professional README.\n\nIn terms of helpfulness, the generated README is highly helpful for quickly getting started and demonstrating the core functionalities due to its self-contained and runnable examples. However, its omissions in API details (especially the `validate` feature) and project context (contribution, testing, licensing) make it less helpful for a comprehensive understanding or for users who want to contribute or explore the project further. Therefore, it's a mixed bag, leading to an 'average/acceptable' rating.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "seam_carver.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\seam_carver_AI_README.md",
+      "ground_truth": "Sample_scripts\\seam_carver.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "__future__",
+          "argparse",
+          "os",
+          "sys",
+          "numba",
+          "numpy",
+          "PIL",
+          "tqdm",
+          "energy_functions",
+          "utils"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 12,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 3,
+        "helpfulness": 4,
+        "similarity": 0.017,
+        "rationale": "The generated README excels in clarity and organization. It presents information in a well-structured manner with clear headings, making it easy to read and digest. The `Features`, `Installation`, `Usage`, and `Examples` sections are exceptionally clear and well-formatted. The generated README correctly identifies and emphasizes the need for companion Python files (`energy_functions.py`, `utils.py`), which is a crucial detail for running the script that the human reference completely misses. This makes it highly helpful for getting the user up and running immediately.\n\nHowever, the generated README falls short on completeness compared to the reference. It lacks several important sections present in the reference, such as a detailed explanation of the underlying 'Algorithm' (steps for seam carving), the academic and historical context/inspiration (UC Berkeley, Princeton, original paper), and a 'Future' section outlining potential improvements. It also omits any demo images or GIFs that would visually illustrate the algorithm's effect. While the generated README's `Limitations or Notes` section is good, it doesn't fully compensate for these broader contextual and technical omissions. Therefore, while it is very helpful for immediate usage, it lacks the deeper technical and contextual completeness of the reference.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Video_editor_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\Video_editor_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Video_editor_bot.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "logging",
+          "pyrogram",
+          "filters"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.002,
+        "rationale": "The generated README is well-written and clear *for the specific script* `Video_editor_bot.py` it describes. It provides a good overview, detailed features, and clear usage examples, even explicitly stating its dependencies on `config.py` and a `handlers` package.\n\nHowever, when compared to the *project-level* reference README, it significantly lacks completeness and overall helpfulness for someone looking to deploy and manage the entire bot project.\n\n**Clarity (3/5):** The content that is present is clear and well-explained. However, the lack of crucial project-level information (like full dependency list via `requirements.txt` or a visual project structure) can make the overall setup process unclear if relying solely on this README for the full project.\n\n**Completeness (2/5):** This is the weakest aspect. The generated README is highly incomplete compared to the reference:\n*   **Missing Deployment Options:** The reference provides convenient one-click deploy buttons for Heroku, Railway, and Okteto, which are entirely absent in the generated README.\n*   **Incomplete Dependencies:** The generated README only lists `pip install pyrogram`. The reference correctly indicates `pip3 install -r requirements.txt`, implying many more dependencies that are missing from the generated instructions.\n*   **No Full Project Structure:** While the generated README verbally describes the need for `config.py` and `handlers/`, it lacks the comprehensive, visual project file tree provided by the reference.\n*   **Missing Features:** The reference lists 'Permanent Thumbnail Support', 'Broadcast Support', 'Mongodb Added', and 'Log Channel Added' that are not explicitly covered in the generated feature list.\n*   **No Community/Demo Links:** The demo bot and support group links from the reference are missing.\n*   **No Git Instructions:** The reference includes `git clone` instructions, which are fundamental for project setup.\n\n**Helpfulness (2/5):** While the usage examples for bot commands are good, the significant omissions in deployment, full dependency management, and understanding the project structure severely limit its helpfulness for setting up and running the *full bot project* from scratch, which the reference README effectively enables.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "vpc_subnet_calculator.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\vpc_subnet_calculator_AI_README.md",
+      "ground_truth": "Sample_scripts\\vpc_subnet_calculator.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "__future__",
+          "argparse",
+          "math",
+          "netaddr"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 4,
+        "helpfulness": 5,
+        "similarity": 0.021,
+        "rationale": "The generated README is exceptionally clear and helpful. It provides a comprehensive overview, detailed features list, clear installation instructions, precise usage guidelines with arguments explained, and excellent examples with output and explanations. This makes it far more actionable and user-friendly than the sparse reference README.\n\nFor completeness, the generated README excels in providing all necessary information to understand, install, and operate the script. However, when comparing it strictly to the reference, it misses a few key contextual elements:\n1.  The mention of the script's intention to be an 'external data source for Terraform'. This seems to be a primary motivation for the script in the reference.\n2.  The entire 'TODO' section, which outlines future plans and further emphasizes the Terraform integration aspect.\n3.  The project badges (Build Status, Coverage Status, Codacy Badge).\n\nWhile the generated README *adds* significantly more practical and detailed information than the reference, the absence of the specific project purpose (Terraform integration) and the future roadmap constitutes a moderate omission of contextual information present in the reference. This prevents a perfect score for completeness, bringing it down to a strong 4.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "Watermark_bot.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\Watermark_bot_AI_README.md",
+      "ground_truth": "Sample_scripts\\Watermark_bot.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [],
+        "predicted": [
+          "os",
+          "time",
+          "json",
+          "random",
+          "asyncio",
+          "aiohttp",
+          "hachoir",
+          "PIL",
+          "core",
+          "delete_trash",
+          "pyrogram",
+          "filters",
+          "configs",
+          "humanbytes",
+          "InlineKeyboardButton",
+          "CallbackQuery",
+          "MessageNotModified"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 0,
+        "hits": 0,
+        "completeness": 1.0
+      },
+      "description": {
+        "clarity": 5,
+        "completeness": 3,
+        "helpfulness": 3,
+        "similarity": 0.061,
+        "rationale": "The generated README excels in clarity, providing a very well-structured and easy-to-understand explanation of the bot's features and how to use it. The usage instructions are particularly strong, guiding the user step-by-step with examples.\n\nHowever, it falls short on completeness and, consequently, helpfulness due to several significant omissions. Crucially, the generated README completely misses the `DATABASE_URL` configuration variable, which the reference indicates is for a MongoDB database. This is a critical functional dependency for a bot that manages user settings and tracks users, making the bot likely non-functional for its core features if deployed based solely on this README. It also omits all deployment instructions (e.g., Heroku button, manual installation steps with `git clone` and `requirements.txt`), demo bot links, and support group information present in the reference. While it provides specific Python dependencies, the absence of the database configuration and deployment paths is a major drawback for anyone trying to set up the bot from scratch. The helpfulness for a developer is severely reduced by these omissions, despite the excellent user-facing documentation.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    },
+    {
+      "script": "wisdom_tree.py",
+      "mode": "ai",
+      "readme_path": "artifacts\\readmegenv2_eval_no_ast\\no-ast-gemini-gemini\\generated\\wisdom_tree_AI_README.md",
+      "ground_truth": "Sample_scripts\\wisdom_tree.md",
+      "dependencies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "actual": [
+          "This",
+          "Wisdom-tree",
+          "allows",
+          "anywhere",
+          "app",
+          "brew",
+          "cd",
+          "from",
+          "inject",
+          "installed",
+          "is",
+          "mac",
+          "make",
+          "music",
+          "play",
+          "please",
+          "run",
+          "sdl2_mixer",
+          "sure",
+          "to",
+          "uses",
+          "vlc",
+          "windows-curses",
+          "wisdom-tree"
+        ],
+        "predicted": [
+          "curses",
+          "os",
+          "threading",
+          "time",
+          "pathlib",
+          "typing",
+          "wisdom_tree",
+          "StateManager",
+          "get_user_config_directory"
+        ]
+      },
+      "cli": {
+        "detected": 2,
+        "actual": 3,
+        "hits": 0,
+        "completeness": 0.0
+      },
+      "description": {
+        "clarity": 3,
+        "completeness": 2,
+        "helpfulness": 2,
+        "similarity": 0.009,
+        "rationale": "The generated README has several strengths in terms of its internal clarity and formatting. The 'Overview', 'Features' list, 'Installation' steps (for local setup), 'Controls' table, and 'Examples' are all well-structured and easy to read. However, when compared to the human reference, it suffers from significant omissions and discrepancies that severely impact its completeness and overall helpfulness.\n\n**Missing Content (Completeness & Helpfulness Issues):**\n*   **Visuals:** The most glaring omission for a TUI application is the complete absence of a logo, download badges, a showcase video, and screenshots, all of which are prominently featured in the reference. This makes it very difficult for a new user to understand what the application looks like or how it functions visually.\n*   **Standard Installation Methods:** The generated README completely misses the primary installation methods for a Python package: `pip install wisdom-tree` or `pipx install wisdom-tree`. It only describes a manual, local file-based installation, which is far less practical for most users.\n*   **Running the Application:** The generated README's instructions to run `python wisdom_tree.py` (assuming a specific local file structure) contradict the reference's instructions to run `wisdom-tree` (after `pip` installation) or `python3 wisdom_tree/main.py` (from GitHub clone). This discrepancy is a major source of confusion and unhelpfulness.\n*   **Platform-Specific Dependencies:** It correctly identifies `windows-curses` but misses the `brew install sdl2_mixer` step for Mac users, which is present in the reference.\n*   **Custom Quotes:** The reference provides detailed instructions on how users can add their own custom quotes, a significant feature completely absent from the generated README.\n*   **Specific Usage Controls:** While the generated has an excellent controls table, it misses specific controls for the 'lofi-radio' feature (`n` to skip, `r` to replay) mentioned in the reference.\n*   **Project Context:** It misses the 'Tipping' section, which provides additional context about the project maintainer.\n\n**Clarity Issues:**\nWhile the internal formatting of the generated README is excellent, the discrepancies regarding the primary installation methods and the entry point for running the application (`wisdom_tree.py` vs. `wisdom_tree/main.py` or `wisdom-tree`) undermine its overall clarity for a user trying to get the *actual* project running as intended by the reference. A user following only the generated README would likely struggle to install and run the application in the standard way.\n\nIn summary, despite its clear structure and good prose for what it covers, the generated README misses too much critical information (especially visuals and standard installation) and presents potentially misleading instructions regarding how to run the application to be considered strong or helpful.",
+        "judge": "google"
+      },
+      "generation": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "judge": {
+        "provider": "google",
+        "model": "gemini-2.5-flash"
+      },
+      "signal_profile": {
+        "docstrings": {
+          "module_docstring": false,
+          "function_docstrings": 0,
+          "class_docstrings": 0
+        },
+        "cli": {
+          "framework": "",
+          "arguments": 2,
+          "uses_sys_argv": false
+        },
+        "requirements": {
+          "files": [],
+          "packages": []
+        },
+        "external_tools": [],
+        "env_var_count": 0,
+        "generation": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "notes": {
+          "strengths": [
+            "CLI flags inferred from runtime help output."
+          ],
+          "risks": [
+            "No static analysis facts available; README is based solely on code text and LLM inference."
+          ]
+        },
+        "no_ast": true
+      }
+    }
+  ],
+  "summary": {
+    "sample_size": 21,
+    "dependencies_precision": {
+      "avg": 0.033,
+      "min": 0.0,
+      "max": 0.5,
+      "median": 0.0
+    },
+    "dependencies_recall": {
+      "avg": 0.012,
+      "min": 0.0,
+      "max": 0.143,
+      "median": 0.0
+    },
+    "cli_completeness": {
+      "avg": 0.579,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    "description_clarity": {
+      "avg": 4.381,
+      "min": 2,
+      "max": 5,
+      "median": 5
+    },
+    "description_completeness": {
+      "avg": 2.905,
+      "min": 1,
+      "max": 5,
+      "median": 2
+    },
+    "description_helpfulness": {
+      "avg": 3.238,
+      "min": 1,
+      "max": 5,
+      "median": 3
+    },
+    "dependencies_precision_avg": 0.033,
+    "dependencies_recall_avg": 0.012,
+    "cli_completeness_avg": 0.579,
+    "description_clarity_avg": 4.381,
+    "description_completeness_avg": 2.905,
+    "description_helpfulness_avg": 3.238
+  },
+  "signal_insights": {
+    "has_cli_flags": {
+      "clarity": 4.35,
+      "completeness": 2.95,
+      "helpfulness": 3.3,
+      "cli_completeness": 0.608,
+      "dep_precision": 0.035,
+      "dep_recall": 0.013,
+      "sample_size": 20
+    },
+    "no_cli_flags": {
+      "clarity": 5.0,
+      "completeness": 2.0,
+      "helpfulness": 2.0,
+      "cli_completeness": 0.0,
+      "dep_precision": 0.0,
+      "dep_recall": 0.0,
+      "sample_size": 1
+    },
+    "has_imports": {
+      "clarity": 4.381,
+      "completeness": 2.905,
+      "helpfulness": 3.238,
+      "cli_completeness": 0.579,
+      "dep_precision": 0.033,
+      "dep_recall": 0.012,
+      "sample_size": 21
+    },
+    "no_imports": {
+      "clarity": 0.0,
+      "completeness": 0.0,
+      "helpfulness": 0.0,
+      "cli_completeness": 0.0,
+      "dep_precision": 0.0,
+      "dep_recall": 0.0,
+      "sample_size": 0
+    },
+    "no_ast": {
+      "clarity": 4.381,
+      "completeness": 2.905,
+      "helpfulness": 3.238,
+      "cli_completeness": 0.579,
+      "dep_precision": 0.033,
+      "dep_recall": 0.012,
+      "sample_size": 21
+    }
+  },
+  "examples": {
+    "top_helpfulness": [
+      {
+        "script": "encrypt.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 5.0,
+        "completeness": 5.0,
+        "helpfulness": 5.0,
+        "rationale": "The generated README is exceptionally clear, complete, and helpful when compared to the reference. It provides a detailed overview, a comprehensive list of features, and crucial installation instructions (including depe\u2026"
+      },
+      {
+        "script": "fileorganizer.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 5.0,
+        "completeness": 5.0,
+        "helpfulness": 5.0,
+        "rationale": "The generated README is exceptional. It provides a clear overview, detailed features, and most importantly, comprehensive installation and usage instructions. The inclusion of the `extensiondict.py` example content is i\u2026"
+      },
+      {
+        "script": "fmi.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 5.0,
+        "completeness": 4.0,
+        "helpfulness": 5.0,
+        "rationale": "The generated README is exceptionally clear and helpful, especially considering the context of `fmi.py` being a module requiring a companion `observation.py` file. It goes to great lengths to explain this dependency, pr\u2026"
+      }
+    ],
+    "bottom_dependencies": [
+      {
+        "script": "clippy.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 0.0,
+        "clarity": 5.0,
+        "completeness": 2.0,
+        "helpfulness": 3.0,
+        "rationale": "The generated README is exceptionally clear and well-written for the scope it covers \u2013 describing a single Python script. Its explanations of features, usage, examples, and limitations are professional-quality (Clarity:\u2026"
+      },
+      {
+        "script": "CyberScraper.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 0.0,
+        "clarity": 2.0,
+        "completeness": 1.0,
+        "helpfulness": 1.0,
+        "rationale": "The generated README is severely incomplete and misleading compared to the human reference. Major sections are entirely missing, including the existence and details of the 'Scrapeless Integration Branch,' comprehensive \u2026"
+      },
+      {
+        "script": "docker-db-auto-backup.py",
+        "dep_precision": 0.0,
+        "dep_recall": 0.0,
+        "cli_completeness": 1.0,
+        "clarity": 5.0,
+        "completeness": 3.0,
+        "helpfulness": 3.0,
+        "rationale": "The generated README clearly and explicitly states that it is a README for a test suite (`docker-db-auto-backup.py`) and not the actual database backup utility itself (`db-auto-backup.py`). It makes this distinction upf\u2026"
+      }
+    ]
+  }
+}
