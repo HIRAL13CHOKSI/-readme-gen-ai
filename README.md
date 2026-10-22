@@ -1,175 +1,235 @@
-# readme-gen-ai
+# README Generation AI
 
-Automated README generation system for CSE 5095.  
-This project generates README files directly from single Python scripts using
-Large Language Models (OpenAI and Gemini), with optional AST-based static analysis.
-It also includes a fully automated evaluation pipeline for reproducible experiments.
+Generate Markdown documentation from individual Python scripts using structured code analysis and large language models.
 
----
+Developed for **CSE 5095**, this academic project explores a practical question: how can facts extracted from Python code help an LLM produce useful README documentation? It includes a command-line generator and separate evaluation workflows for AST-grounded and LLM-only generation.
 
-## Environment Configuration
+## What it does
 
-### 1. Install dependencies
+- Extracts imports, argparse options, docstrings, top-level definitions, environment-variable references, and nearby project metadata.
+- Builds a structured prompt from those facts and generates a README through an LLM provider.
+- Processes a single Python file or the immediate Python files in a directory.
+- Supports OpenAI, Google Gemini, and Groq through a shared provider interface.
+- Includes saved generated documents, evaluation summaries, and a project report.
 
-```bash
-pip install -r requirements.txt
+This is a script-level documentation tool, not a whole-repository understanding system. Generated documentation requires human review.
+
+## Explore without API access
+
+| Resource | What to inspect |
+|---|---|
+| [Example Python script](Sample_scripts/QR_Generator.py) | An input from the sample collection |
+| [Saved generated README](artifacts/readmegenv2_eval/ast-openai-openai/generated/QR_Generator_AI_README.md) | An example output from a recorded evaluation |
+| [AST-grounded evaluation summary](artifacts/readmegenv2_eval/ast-openai-openai/summary_ast-openai-openai.md) | Aggregate metrics, per-file results, and error reporting |
+| [LLM-only evaluation summary](artifacts/readmegenv2_eval_no_ast/no-ast-openai-openai/summary_no-ast-openai-openai.md) | A baseline run to inspect alongside the AST workflow |
+| [Final project report](README_Generator_Final_Report.pdf) | Additional academic project context |
+
+The sample scripts are evaluation inputs; their presence does not establish authorship of those programs.
+
+## Architecture
+
+The CLI always uses the analysis-based generation pipeline. The LLM-only baseline lives in a separate evaluation runner.
+
+```mermaid
+flowchart TD
+    A["Python script"] --> B["AST analysis and project metadata"]
+    B --> C["Structured facts"]
+    C --> D["Prompt builder"]
+    D --> E["Provider adapter"]
+    E --> F["Generated Markdown"]
+    A --> G["LLM-only baseline: missing module"]
+    G --> H["Generated baseline Markdown"]
+    F --> I["Evaluation runners"]
+    H --> I
+    I --> J["JSON metrics and Markdown summaries"]
 ```
 
----
+| Component | Responsibility |
+|---|---|
+| [CLI](readmegenv2/__main__.py) | Parses file/folder inputs and generation options |
+| [Analysis](readmegenv2/analysis.py) | Parses Python syntax and discovers relevant project metadata |
+| [Prompt builder](readmegenv2/prompt.py) | Converts extracted facts into generation messages |
+| [Provider interface](readmegenv2/llm.py) | Selects and calls OpenAI, Gemini, or Groq |
+| [Pipeline](readmegenv2/pipeline.py) | Coordinates analysis, generation, and file writing |
+| [AST evaluation](tests/run_readmegenv2_eval.py) | Generates and evaluates AST-grounded READMEs |
+| [LLM-only evaluation](tests/run_readmegenv2_no_ast_eval.py) | Generates and evaluates the no-AST baseline |
 
-### 2. Set API keys
+## Setup
 
-This project supports **OpenAI** and **Google Gemini** models for both README
-generation and evaluation.
+Run the commands from the repository root. Use **Python 3.10 or newer** for the code's type-annotation syntax; a tested version matrix is not currently provided.
 
-Set the following environment variables:
-
-#### OpenAI
 ```bash
-export OPENAI_API_KEY=YOUR_OPENAI_KEY
+git clone https://github.com/HIRAL13CHOKSI/-readme-gen-ai.git
+cd ./-readme-gen-ai
+python -m venv .venv
 ```
 
-#### Gemini (Google)
+Activate the virtual environment:
+
+- macOS/Linux: `source .venv/bin/activate`
+- Windows PowerShell: `.venv\Scripts\Activate.ps1`
+
+Then install the provider clients:
+
 ```bash
-export GEMINI_API_KEY=YOUR_GEMINI_KEY
+python -m pip install -r requirements.txt
+python -m readmegenv2 --help
 ```
 
-> At least one API key must be set to run generation or evaluation.
+Dependencies currently use minimum versions rather than an exact environment lock. External service and SDK changes can affect reruns.
 
----
+### Configure a provider
 
-## Generate READMEs
+Set the corresponding environment variable in your local environment:
 
-### Generate a README for a single Python script
+| CLI provider value | Environment variable | Client package |
+|---|---|---|
+| `openai` | `OPENAI_API_KEY` | `openai` |
+| `google` | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `google-generativeai` |
+| `groq` | `GROQ_API_KEY` | `groq` |
+
+For example, in a POSIX shell:
 
 ```bash
-python -m readmegenv2 path/to/script.py \
-  --out path/to/README.generated.md \
+export OPENAI_API_KEY="YOUR_LOCAL_API_KEY"
+```
+
+In PowerShell:
+
+```powershell
+$env:OPENAI_API_KEY = "YOUR_LOCAL_API_KEY"
+```
+
+Do not commit real keys. Prefer environment variables over command-line key overrides, which can appear in shell history or process listings.
+
+**Provider note:** Gemini is selected with `--provider google`, although the current CLI help lists only `auto|openai|groq`. When `auto` is used, selection follows available keys in the order OpenAI → Google → Groq. Always pair an explicit provider with a model supported by that provider.
+
+## Generate a README
+
+### Single file
+
+```bash
+python -m readmegenv2 Sample_scripts/QR_Generator.py \
+  --out README.generated.md \
   --provider openai \
-  --model gpt-4o-mini \
-  --probe-help \
+  --model YOUR_AVAILABLE_OPENAI_MODEL \
   --print-facts
 ```
 
----
+Replace the model placeholder with a model available to your account. This command writes a generated file without overwriting this repository's README.
 
-### Generate READMEs for an entire folder
+### Folder of scripts
 
 ```bash
 python -m readmegenv2 Sample_scripts \
   --out artifacts/generated_readmes \
-  --provider auto \
-  --model gpt-4o-mini
+  --provider openai \
+  --model YOUR_AVAILABLE_OPENAI_MODEL
 ```
 
-Each `.py` file receives its own generated README in the output directory.
+Folder mode processes immediate `.py` files in sorted order; it does not recurse. Each output is named `<script_stem>_AI_README.md`. Existing files at the chosen output paths can be overwritten.
 
----
+For Gemini or Groq, use `--provider google` or `--provider groq` with the matching key and model.
 
-## Running the Evaluation Workflow (AST-Grounded)
+### Optional help probing
 
-### OpenAI → OpenAI
+Add `--probe-help` only for scripts you trust. It runs `python script.py --help` with a short timeout and inherits the current environment. A script can perform actions before handling `--help`; a timeout and temporary working directory do not provide a security sandbox.
+
+Without this option, normal CLI generation analyzes the script rather than executing it. Analysis can also inspect nearby project metadata.
+
+## Evaluation
+
+Both runner sources pair files in `Sample_scripts/` with reference Markdown files of the same stem and define generated-document and report outputs. The AST runner's help command works without API access. The no-AST runner is currently blocked by a missing module, as detailed below.
+
+| Signal | Interpretation |
+|---|---|
+| Dependency precision and recall | Dependency recovery under the runner's extraction and comparison rules |
+| CLI completeness | Coverage of detected command-line arguments |
+| Clarity, completeness, helpfulness | LLM-judge ratings on a 1–5 scale relative to reference documentation |
+| Error records | Samples that could not be evaluated successfully |
+
+These runners are experiments, not a conventional unit-test suite. They make paid external API calls and perform help probing during evaluation, so run them only on trusted sample inputs in an appropriate environment.
+
+### Run an AST-grounded experiment
 
 ```bash
 python tests/run_readmegenv2_eval.py \
   --gen-provider openai \
-  --gen-model gpt-4o-mini \
+  --gen-model YOUR_AVAILABLE_OPENAI_MODEL \
   --judge-provider openai \
-  --judge-model gpt-4o-mini \
-  --run-label ast-openai-openai
+  --judge-model YOUR_AVAILABLE_OPENAI_MODEL \
+  --run-label ast-openai-openai-new
 ```
 
-### OpenAI → Gemini
+Outputs: `artifacts/readmegenv2_eval/<run-label>/`.
 
-```bash
-python tests/run_readmegenv2_eval.py \
-  --gen-provider openai \
-  --gen-model gpt-4o-mini \
-  --judge-provider google \
-  --judge-model gemini-2.0-flash \
-  --run-label ast-openai-gemini
-```
+### LLM-only baseline: currently blocked
 
-### Gemini → OpenAI
+The committed runner imports `readmegenv2_no_ast.pipeline`, but `readmegenv2_no_ast/` is absent from the repository. Even `--help` currently raises `ModuleNotFoundError`. Historical outputs are available, but this baseline cannot be rerun from the committed files alone.
 
-```bash
-python tests/run_readmegenv2_eval.py \
-  --gen-provider google \
-  --gen-model gemini-2.0-flash \
-  --judge-provider openai \
-  --judge-model gpt-4o-mini \
-  --run-label ast-gemini-openai
-```
-
-### Gemini → Gemini
-
-```bash
-python tests/run_readmegenv2_eval.py \
-  --gen-provider google \
-  --gen-model gemini-2.0-flash \
-  --judge-provider google \
-  --judge-model gemini-2.0-flash \
-  --run-label ast-gemini-gemini
-```
-
----
-
-## LLM-Only (No-AST) Evaluation Pipeline
-
-Outputs are written to:
-
-```text
-artifacts/readmegenv2_eval_no_ast/<run-label>/
-```
-
-### OpenAI → OpenAI
+The intended invocation, **after the missing implementation is restored**, is:
 
 ```bash
 python tests/run_readmegenv2_no_ast_eval.py \
   --gen-provider openai \
-  --gen-model gpt-4o-mini \
+  --gen-model YOUR_AVAILABLE_OPENAI_MODEL \
   --judge-provider openai \
-  --judge-model gpt-4o-mini \
-  --run-label no-ast-openai-openai
+  --judge-model YOUR_AVAILABLE_OPENAI_MODEL \
+  --run-label no-ast-openai-openai-new
 ```
 
-### OpenAI → Gemini
+Outputs: `artifacts/readmegenv2_eval_no_ast/<run-label>/`.
 
-```bash
-python tests/run_readmegenv2_no_ast_eval.py \
-  --gen-provider openai \
-  --gen-model gpt-4o-mini \
-  --judge-provider google \
-  --judge-model gemini-2.0-flash \
-  --run-label no-ast-openai-gemini
-```
+Generation and judging can use different providers. For example, use `--gen-provider google` with an available Gemini model and `--judge-provider openai` with an available OpenAI model. Configure both keys. Use new run labels to avoid mixing with recorded experiments.
 
-### Gemini → OpenAI
+### Recorded evidence and limitations
 
-```bash
-python tests/run_readmegenv2_no_ast_eval.py \
-  --gen-provider google \
-  --gen-model gemini-2.0-flash \
-  --judge-provider openai \
-  --judge-model gpt-4o-mini \
-  --run-label no-ast-gemini-openai
-```
+The committed [AST OpenAI→OpenAI summary](artifacts/readmegenv2_eval/ast-openai-openai/summary_ast-openai-openai.md) reports:
 
-### Gemini → Gemini
+| Recorded measure | Value |
+|---|---:|
+| Evaluated samples | 20 |
+| Samples skipped due to errors | 1 |
+| Mean dependency precision | 1.000 |
+| Mean dependency recall | 0.875 |
+| Mean CLI completeness | 0.900 |
+| Mean description clarity | 3.850 / 5 |
+| Mean description completeness | 3.200 / 5 |
+| Mean description helpfulness | 3.250 / 5 |
 
-```bash
-python tests/run_readmegenv2_no_ast_eval.py \
-  --gen-provider google \
-  --gen-model gemini-2.0-flash \
-  --judge-provider google \
-  --judge-model gemini-2.0-flash \
-  --run-label no-ast-gemini-gemini
-```
+That run records `gpt-4o-mini` for both generation and judging. These figures describe a historical artifact, not a fresh reproduction or a guarantee on new scripts.
 
----
+Interpret results with care:
 
-## Reproducibility Notes
+- LLM judges introduce model-specific preferences; using the same model for generation and judging does not provide independent human validation.
+- Reference documentation and extracted metadata are imperfect evaluation targets.
+- The AST and no-AST runners use different metric implementations, including different empty-set dependency conventions. Their aggregate scores should not be treated as a controlled causal comparison without aligning the measurement rules.
+- Errors, a small sample collection, and changing models or dependencies limit generalization and exact reproducibility.
+- The records alone do not establish that AST grounding improves every metric or eliminates hallucinations.
 
-- All experiments can be reproduced by setting the appropriate API keys and
-  re-running the commands above.
-- AST-grounded and No-AST results are kept in separate artifact directories.
+## Data handling and practical limits
+
+- Generation sends extracted code-derived facts to the selected external provider; judging sends generated/reference material. The baseline generation input cannot be fully verified because its implementation is missing.
+- Inspect the inputs and provider terms before processing private code. Do not use secrets or confidential datasets as sample inputs.
+- API access, quotas, network connectivity, and valid model identifiers are required for live generation and judging.
+- Static analysis may miss dynamic imports, custom argument parsing, runtime behavior, or application context.
+- Generated instructions, dependencies, badges, and other claims require review before publication.
+- The repository does not currently define an automated unit-test/CI workflow or a supported deployment service.
+
+## Repository guide
+
+| Path | Contents |
+|---|---|
+| `readmegenv2/` | Generator implementation |
+| `Sample_scripts/` | Sample Python programs and reference Markdown |
+| `Sample_Outputs/` | Additional saved generation examples |
+| `tests/` | Evaluation runners |
+| `artifacts/` | Recorded generation outputs, metrics, and summaries |
+| `ast-gemini-gemini/` | Separately stored Gemini→Gemini experiment artifacts |
+| `README_Generator_Final_Report.pdf` | Project report |
+
+## Project context and next steps
+
+This repository presents an academic CSE 5095 project. It does not establish that all sample programs were authored as part of the generator; sample provenance and any upstream attribution should be documented before reusing or redistributing them.
+
+Potential next steps include restoring the missing no-AST implementation, offline tests for analysis and provider routing, consistent evaluation metrics across both runners, a recorded tested environment, and clearer sample provenance. These are proposed improvements, not implemented features.
