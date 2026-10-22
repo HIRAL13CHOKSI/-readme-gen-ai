@@ -327,7 +327,7 @@ def _build_signal_profile(
     ]
 
     if cli_args:
-        strengths.append("CLI flags inferred from runtime help output.")
+        strengths.append("CLI flags inferred by the LLM from source text.")
 
     return {
         "docstrings": {
@@ -481,6 +481,7 @@ def evaluate_script(
 
         return {
             "script": script_path.name,
+            "baseline_implementation": predicted_facts.get("implementation", "unknown"),
             "mode": mode,
             "readme_path": os.path.relpath(out_path, ROOT),
             "ground_truth": os.path.relpath(gt_readme, ROOT),
