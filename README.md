@@ -1,6 +1,6 @@
-# README Generation AI
+# LLM-Powered README Generator
 
-Generate Markdown documentation from individual Python scripts using structured code analysis and large language models.
+Generates documentation from Python scripts using AST-based code analysis and large language models.
 
 Developed for **CSE 5095**, this academic project explores a practical question: how can facts extracted from Python code help an LLM produce useful README documentation? It includes a command-line generator and separate evaluation workflows for AST-grounded and LLM-only generation.
 
