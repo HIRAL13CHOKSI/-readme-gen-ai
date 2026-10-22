@@ -37,7 +37,7 @@ flowchart TD
     C --> D["Prompt builder"]
     D --> E["Provider adapter"]
     E --> F["Generated Markdown"]
-    A --> G["LLM-only baseline: missing module"]
+    A --> G["Source-text LLM-only baseline"]
     G --> H["Generated baseline Markdown"]
     F --> I["Evaluation runners"]
     H --> I
@@ -139,7 +139,7 @@ Without this option, normal CLI generation analyzes the script rather than execu
 
 ## Evaluation
 
-Both runner sources pair files in `Sample_scripts/` with reference Markdown files of the same stem and define generated-document and report outputs. The AST runner's help command works without API access. The no-AST runner is currently blocked by a missing module, as detailed below.
+Both runner sources pair files in `Sample_scripts/` with reference Markdown files of the same stem and define generated-document and report outputs. The AST runner's help command works without API access. The no-AST runner now uses a newly implemented source-text baseline; this is not a recovery of the original historical implementation.
 
 | Signal | Interpretation |
 |---|---|
@@ -148,7 +148,7 @@ Both runner sources pair files in `Sample_scripts/` with reference Markdown file
 | Clarity, completeness, helpfulness | LLM-judge ratings on a 1–5 scale relative to reference documentation |
 | Error records | Samples that could not be evaluated successfully |
 
-These runners are experiments, not a conventional unit-test suite. They make paid external API calls and perform help probing during evaluation, so run them only on trusted sample inputs in an appropriate environment.
+These runners are experiments, not a conventional unit-test suite. They make paid external API calls. The AST runner performs help probing during evaluation, so run it only on trusted sample inputs in an appropriate environment. The new no-AST baseline accepts the evaluator's probe_help argument for compatibility but never executes the input script.
 
 ### Run an AST-grounded experiment
 
@@ -163,11 +163,11 @@ python tests/run_readmegenv2_eval.py \
 
 Outputs: `artifacts/readmegenv2_eval/<run-label>/`.
 
-### LLM-only baseline: currently blocked
+### Run the new LLM-only baseline
 
-The committed runner imports `readmegenv2_no_ast.pipeline`, but `readmegenv2_no_ast/` is absent from the repository. Even `--help` currently raises `ModuleNotFoundError`. Historical outputs are available, but this baseline cannot be rerun from the committed files alone.
+The original no-AST implementation was absent from the repository. The replacement in `readmegenv2_no_ast/` sends script text to the selected LLM and requests structured JSON containing README Markdown, inferred third-party imports, and inferred CLI flags. It performs no AST analysis or input-script execution, validates the returned structure, and writes the Markdown only after validation succeeds.
 
-The intended invocation, **after the missing implementation is restored**, is:
+**This is a new baseline (`source-text-baseline-v1`), not the implementation that produced historical artifacts.** Metadata is inferred by the LLM, not guaranteed ground truth. Use new run labels and record fresh results; no live quality benchmark has yet been run for this replacement.
 
 ```bash
 python tests/run_readmegenv2_no_ast_eval.py \
@@ -175,7 +175,7 @@ python tests/run_readmegenv2_no_ast_eval.py \
   --gen-model YOUR_AVAILABLE_OPENAI_MODEL \
   --judge-provider openai \
   --judge-model YOUR_AVAILABLE_OPENAI_MODEL \
-  --run-label no-ast-openai-openai-new
+  --run-label source-text-v1-openai-openai-new
 ```
 
 Outputs: `artifacts/readmegenv2_eval_no_ast/<run-label>/`.
@@ -209,21 +209,31 @@ Interpret results with care:
 
 ## Data handling and practical limits
 
-- Generation sends extracted code-derived facts to the selected external provider; judging sends generated/reference material. The baseline generation input cannot be fully verified because its implementation is missing.
+- Generation sends extracted code-derived facts to the selected external provider; judging sends generated/reference material. The new no-AST baseline sends the full input script text to the selected provider. Only process source code you are authorized to share.
 - Inspect the inputs and provider terms before processing private code. Do not use secrets or confidential datasets as sample inputs.
 - API access, quotas, network connectivity, and valid model identifiers are required for live generation and judging.
 - Static analysis may miss dynamic imports, custom argument parsing, runtime behavior, or application context.
 - Generated instructions, dependencies, badges, and other claims require review before publication.
-- The repository does not currently define an automated unit-test/CI workflow or a supported deployment service.
+- Offline baseline tests are available; no automated CI workflow or supported deployment service is currently defined.
+
+## Offline baseline checks
+
+```bash
+python -m unittest discover -s tests -p test_no_ast_pipeline.py -v
+python tests/run_readmegenv2_no_ast_eval.py --help
+```
+
+The tests mock provider calls; no API keys or paid requests are required. They cover provider routing, structured-response validation, output writing, error propagation, and non-execution of input scripts. Successful offline tests establish interface behavior, not LLM output quality.
 
 ## Repository guide
 
 | Path | Contents |
 |---|---|
-| `readmegenv2/` | Generator implementation |
+| `readmegenv2/` | AST-grounded generator implementation |
+| `readmegenv2_no_ast/` | New source-text baseline implementation |
 | `Sample_scripts/` | Sample Python programs and reference Markdown |
 | `Sample_Outputs/` | Additional saved generation examples |
-| `tests/` | Evaluation runners |
+| `tests/` | Evaluation runners and offline baseline tests |
 | `artifacts/` | Recorded generation outputs, metrics, and summaries |
 | `ast-gemini-gemini/` | Separately stored Gemini→Gemini experiment artifacts |
 | `README_Generator_Final_Report.pdf` | Project report |
@@ -232,4 +242,4 @@ Interpret results with care:
 
 This repository presents an academic CSE 5095 project. It does not establish that all sample programs were authored as part of the generator; sample provenance and any upstream attribution should be documented before reusing or redistributing them.
 
-Potential next steps include restoring the missing no-AST implementation, offline tests for analysis and provider routing, consistent evaluation metrics across both runners, a recorded tested environment, and clearer sample provenance. These are proposed improvements, not implemented features.
+Potential next steps include offline tests for the AST analysis, consistent evaluation metrics across both runners, fresh baseline measurements, a recorded tested environment, and clearer sample provenance. These are proposed improvements, not implemented features.
