@@ -56,7 +56,7 @@ flowchart TD
 
 ## Setup
 
-Run the commands from the repository root. Use **Python 3.10 or newer** for the code's type-annotation syntax; a tested version matrix is not currently provided.
+Run the commands from the repository root. Use **Python 3.10 or newer** for the code's type-annotation syntax. The offline CI workflow targets Python 3.10, 3.11, and 3.12; it does not validate provider SDK compatibility or live API behavior.
 
 ```bash
 git clone https://github.com/HIRAL13CHOKSI/-readme-gen-ai.git
@@ -214,12 +214,18 @@ Interpret results with care:
 - API access, quotas, network connectivity, and valid model identifiers are required for live generation and judging.
 - Static analysis may miss dynamic imports, custom argument parsing, runtime behavior, or application context.
 - Generated instructions, dependencies, badges, and other claims require review before publication.
-- Offline baseline tests are available; no automated CI workflow or supported deployment service is currently defined.
+- Offline baseline checks run in GitHub Actions; no supported deployment service is currently defined.
 
 ## Offline baseline checks
 
+The [Offline checks workflow](.github/workflows/offline-checks.yml) runs on pull requests, pushes to `main`, and manual dispatch. It targets Python 3.10, 3.11, and 3.12, runs the existing mocked baseline tests, and checks the CLI and both evaluator help commands. It uses only the Python standard library: no dependency installation, provider credentials, generation runs, or paid API requests are needed. The workflow has read-only repository permissions.
+
+Run the same checks locally from the repository root (a clean virtual environment is sufficient):
+
 ```bash
 python -m unittest discover -s tests -p test_no_ast_pipeline.py -v
+python -m readmegenv2 --help
+python tests/run_readmegenv2_eval.py --help
 python tests/run_readmegenv2_no_ast_eval.py --help
 ```
 
