@@ -2,7 +2,18 @@
 
 Generates documentation from Python scripts using AST-based code analysis and large language models.
 
-Developed for **CSE 5095**, this academic project explores a practical question: how can facts extracted from Python code help an LLM produce useful README documentation? It includes a command-line generator and separate evaluation workflows for AST-grounded and LLM-only generation.
+Developed for **CSE 5095 — AI for Software Engineering, University of Connecticut**, this academic project explores a practical question: how can facts extracted from Python code help an LLM produce useful README documentation? It includes a command-line generator and separate evaluation workflows for AST-grounded and LLM-only generation.
+
+## Project at a glance
+
+**Team:** Cole Lavigne, Hiral Ankur Choksi, and Varun Raghunath Reddy.
+
+- **Problem:** turn a single Python script into useful documentation while keeping the output grounded in code-derived facts.
+- **Approach:** extract structured facts with static analysis, construct a grounded prompt, generate Markdown through a provider adapter, and evaluate the result.
+- **Recorded results:** **1.000 dependency precision**, **0.875 dependency recall**, and **0.900 CLI completeness** in the committed OpenAI→OpenAI evaluation summary.
+- **Research questions:** can LLMs document whole scripts, how does static analysis affect factual consistency, and what trade-offs remain between grounding and useful explanations?
+
+These are results from the saved academic experiment, not a newly reproduced benchmark. Detailed scores and limitations appear below.
 
 ## What it does
 
@@ -198,6 +209,12 @@ The committed [AST OpenAI→OpenAI summary](artifacts/readmegenv2_eval/ast-opena
 | Mean description helpfulness | 3.250 / 5 |
 
 That run records `gpt-4o-mini` for both generation and judging. These figures describe a historical artifact, not a fresh reproduction or a guarantee on new scripts.
+
+### What individual examples reveal
+
+- **`seam_carver.py`:** the saved evaluation detected **12/12 CLI flags**. It received clarity 4/5, completeness 3/5 and helpfulness 4/5, showing that complete flag detection does not guarantee complete documentation.
+- **`QR_Generator.py`:** the saved evaluation detected **0/1 CLI flags** despite dependency precision and recall of 1.00, illustrating that dependency recovery and usage coverage measure different aspects of quality.
+- **`Local-File-Organizer.py`:** dependency recall was **0.28** in the saved summary, highlighting limits in recovering behavior and dependencies from a single script.
 
 Interpret results with care:
 
