@@ -33,7 +33,10 @@ This is a script-level documentation tool, not a whole-repository understanding 
 | [Saved generated README](artifacts/readmegenv2_eval/ast-openai-openai/generated/QR_Generator_AI_README.md) | An example output from a recorded evaluation |
 | [AST-grounded evaluation summary](artifacts/readmegenv2_eval/ast-openai-openai/summary_ast-openai-openai.md) | Aggregate metrics, per-file results, and error reporting |
 | [LLM-only evaluation summary](artifacts/readmegenv2_eval_no_ast/no-ast-openai-openai/summary_no-ast-openai-openai.md) | A baseline run to inspect alongside the AST workflow |
+| [Project presentation](docs/README_Generator_Portfolio_Presentation.pdf) | Architecture, original output examples, results, and limitations; revised to match the saved evaluation |
 | [Final project report](README_Generator_Final_Report.pdf) | Additional academic project context |
+
+The presentation is a portfolio revision of the November 2025 course deck. It preserves the original team credits and output screenshots, replaces the unfinished placeholder, and aligns result slides with the committed OpenAI→OpenAI summary. It does not report new experiments. The original project report remains a historical reference.
 
 The sample scripts are evaluation inputs; their presence does not establish authorship of those programs.
 
@@ -259,6 +262,7 @@ The tests mock provider calls; no API keys or paid requests are required. They c
 | `tests/` | Evaluation runners and offline baseline tests |
 | `artifacts/` | Recorded generation outputs, metrics, and summaries |
 | `ast-gemini-gemini/` | Separately stored Gemini→Gemini experiment artifacts |
+| `docs/README_Generator_Portfolio_Presentation.pdf` | Revised project presentation with architecture and saved results |
 | `README_Generator_Final_Report.pdf` | Project report |
 
 ## Project context and next steps
